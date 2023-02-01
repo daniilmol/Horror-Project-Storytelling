@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Functional Options")]
+    [SerializeField] private bool canSprint = true;
+    [SerializeField] private bool canHeadbob = true;
+    [SerializeField] private bool canFootstep = true;
+
+    [Header("Controls")]
+    [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
+
     [Header("Movement Parameters")]
     [SerializeField] private float walkSpeed = 3.0f;
+    [SerializeField] private float sprintSpeed = 5.0f;
     [SerializeField] private float gravity = 30.0f;
 
     [Header("Look Parameters")]
@@ -13,6 +22,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Range(1, 10)] private float lookSpeedY = 2.0f;
     [SerializeField, Range(1, 180)] private float upperLookLimit = 80.0f;
     [SerializeField, Range(1, 180)] private float lowerLookLimit = 80.0f;
+
+    [Header("Headbob Parameters")]
+    [SerializeField] private float walkBobSpeed = 14f;
+    [SerializeField] private float walkBobAmount = 0.01f;
+    [SerializeField] private float sprintBobSpeed = 20f;
+    [SerializeField] private float sprintBobAmount = 0.03f;
+    private float defaultYPos = 0;
+    private float timer;
+
+    [Header("Footstep Parameters")]
+    [SerializeField] private float baseStepSpeed = 0.5f;
+    [SerializeField] private float sprintStepMultiplier = 0.6f;
+    [SerializeField] private AudioSource footstepsAudioSource = default;
+    [SerializeField] private AudioClip[] woodClips = default;
+    [SerializeField] private AudioClip[] metalClips = default;
+    [SerializeField] private AudioClip[] grassClips = default;
+    private float footstepTimer = 0;
+    private float GetCurrentOffset => isSprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
     
     private Camera playerCamera;
     private CharacterController characterController;
@@ -23,11 +50,13 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
 
     private bool canMove;
+    private bool isSprinting => canSprint && Input.GetKey(sprintKey);
 
     void Awake(){
         canMove = true;
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
+        defaultYPos = playerCamera.transform.localPosition.y;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -41,10 +70,56 @@ public class PlayerController : MonoBehaviour
             HandleMouseLook();
             ApplyFinalMovements();
         }
+        if(canHeadbob){
+            HandleHeadbob();
+        }
+        if(canFootstep){
+            HandleFootsteps();
+        }
+    }
+
+    private void HandleFootsteps(){
+        if(!characterController.isGrounded){
+            return;
+        } 
+        if(curInput == Vector2.zero) {
+            return;
+        }
+        footstepTimer -= Time.deltaTime;
+        if(footstepTimer <= 0){
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 3)){
+                switch(hit.collider.tag){
+                    case "Footsteps/WOOD":
+                    footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                    break;
+                    case "Footsteps/METAL":
+                    footstepsAudioSource.PlayOneShot(metalClips[Random.Range(0, metalClips.Length - 1)]);
+                    break;
+                    case "Footsteps/GRASS":
+                    footstepsAudioSource.PlayOneShot(grassClips[Random.Range(0, grassClips.Length - 1)]);
+                    break;
+                    default://default sound effect, footstep sound that's not any other specific sound
+                    break;
+                }
+            }
+            footstepTimer = GetCurrentOffset;
+        }
+    }
+
+    private void HandleHeadbob(){
+        if(!characterController.isGrounded){
+            return;
+        }
+        if(Mathf.Abs(moveDir.x) > 0.1f || Mathf.Abs(moveDir.z) > 0.1f){
+            timer += Time.deltaTime * (isSprinting ? sprintBobSpeed : walkBobSpeed);
+            playerCamera.transform.localPosition = new Vector3(playerCamera.transform.localPosition.x, 
+            defaultYPos + Mathf.Sin(timer) * (isSprinting ? sprintBobAmount : walkBobAmount), playerCamera.transform.localPosition.z);
+        }
+
     }
 
     private void HandleMovementInput(){
-        curInput = new Vector2(walkSpeed * Input.GetAxisRaw("Vertical"), walkSpeed * Input.GetAxisRaw("Horizontal"));
+        curInput = new Vector2((isSprinting ? sprintSpeed : walkSpeed) * Input.GetAxisRaw("Vertical"), (isSprinting ? sprintSpeed : walkSpeed) * Input.GetAxisRaw("Horizontal"));
         float movDirY = moveDir.y;
         moveDir = (transform.TransformDirection(Vector3.forward) * curInput.x) + (transform.TransformDirection(Vector3.right) * curInput.y);
         moveDir.y = movDirY;
