@@ -27,13 +27,41 @@ public class PlayerController : MonoBehaviour
     void Awake(){
         canMove = true;
         playerCamera = GetComponentInChildren<Camera>();
-        
+        characterController = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(canMove){
+            print(canMove);
+            HandleMovementInput();
+            HandleMouseLook();
+            ApplyFinalMovements();
+        }
+    }
+
+    private void HandleMovementInput(){
+        curInput = new Vector2(walkSpeed * Input.GetAxisRaw("Vertical"), walkSpeed * Input.GetAxisRaw("Horizontal"));
+        float movDirY = moveDir.y;
+        moveDir = (transform.TransformDirection(Vector3.forward) * curInput.x) + (transform.TransformDirection(Vector3.right) * curInput.y);
+        moveDir.y = movDirY;
+    }
+
+    private void HandleMouseLook(){
+        rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
+        rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
+        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeedX, 0);
+    }
+
+    private void ApplyFinalMovements(){
+        if(!characterController.isGrounded){
+            moveDir.y -= gravity * Time.deltaTime;
+        }
+        characterController.Move(moveDir * Time.deltaTime);
     }
 
     public bool CanMove(){
