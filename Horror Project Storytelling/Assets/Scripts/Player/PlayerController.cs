@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canHeadbob = true;
     [SerializeField] private bool canFootstep = true;
+    [SerializeField] private bool canUseFlashlight = true;
 
     [Header("Controls")]
     [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
+    [SerializeField] private KeyCode flashlightKey = KeyCode.F;
 
     [Header("Movement Parameters")]
     [SerializeField] private float walkSpeed = 3.0f;
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sprintBobSpeed = 20f;
     [SerializeField] private float sprintBobAmount = 0.03f;
     private float defaultYPos = 0;
+    private float defaultZPos = 0;
     private float timer;
 
     [Header("Footstep Parameters")]
@@ -43,6 +46,7 @@ public class PlayerController : MonoBehaviour
     
     private Camera playerCamera;
     private CharacterController characterController;
+    private Light flashlight;
 
     private Vector3 moveDir;
     private Vector2 curInput;
@@ -51,12 +55,15 @@ public class PlayerController : MonoBehaviour
 
     private bool canMove;
     private bool isSprinting => canSprint && Input.GetKey(sprintKey);
+    private bool isUsingFlashlight;
 
     void Awake(){
         canMove = true;
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
+        flashlight = GameObject.Find("Flashlight").GetComponent<Light>();
         defaultYPos = playerCamera.transform.localPosition.y;
+        defaultZPos = flashlight.transform.localPosition.z;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -68,6 +75,7 @@ public class PlayerController : MonoBehaviour
             print(canMove);
             HandleMovementInput();
             HandleMouseLook();
+            HandleInputs();
             ApplyFinalMovements();
         }
         if(canHeadbob){
@@ -75,6 +83,17 @@ public class PlayerController : MonoBehaviour
         }
         if(canFootstep){
             HandleFootsteps();
+        }
+    }
+
+    private void HandleInputs(){
+        if(Input.GetKeyDown(flashlightKey) && canUseFlashlight){
+            isUsingFlashlight = !isUsingFlashlight;
+        }
+        if(isUsingFlashlight){
+            flashlight.intensity = 1;
+        }else{
+            flashlight.intensity = 0;
         }
     }
 
