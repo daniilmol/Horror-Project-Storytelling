@@ -24,6 +24,22 @@ public class PlayerController : MonoBehaviour
 
     private bool canMove;
 
+
+    //Collect soul -Mike
+    //public RaycastHit rayHit;
+    //public float collectRange;
+    //public LayerMask isSoul;
+
+    [Header("Interaction")]
+    [SerializeField] private KeyCode interactKey = KeyCode.E;
+    [SerializeField] private Vector3 interactionRayPoint = default;
+    [SerializeField] private float interactionDistance = default;
+    [SerializeField] private LayerMask interactionLayer = default;
+    [SerializeField] private bool canInteract = true;
+    private Interactable currentInteractable;
+
+    // collect soul end
+
     void Awake(){
         canMove = true;
         playerCamera = GetComponentInChildren<Camera>();
@@ -36,10 +52,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(canMove){
-            print(canMove);
+            //print(canMove);
             HandleMovementInput();
             HandleMouseLook();
             ApplyFinalMovements();
+        }
+
+        if (canInteract)
+        {
+            //HandleCollect();
+            HandleInteractionCheck();
+            HandleInteractionInput();
         }
     }
 
@@ -67,4 +90,58 @@ public class PlayerController : MonoBehaviour
     public bool CanMove(){
         return canMove;
     }
+
+    // for collect soul shard - Mike
+    private void HandleCollect()
+    {
+        if (Input.GetKeyDown(KeyCode.E)) // press E to collect for alpha
+        {
+            // collect if soul within collect range
+            //if (Physics.Raycast(transform.position, transform.forward, out rayHit, collectRange, isSoul))
+            //{
+            //    //Debug.Log("collect");
+            //    rayHit.transform.gameObject.SetActive(false); // change it to Destroy(rayHit.transform.gameObject) later
+
+            //    // trigger effect/event
+
+
+            //}
+        }
+    }
+
+    private void HandleInteractionCheck()
+    {
+        if(Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactionDistance))
+        {
+            if(hit.collider.gameObject.layer == 6 && 
+                (currentInteractable == null || hit.collider.gameObject.GetInstanceID() != currentInteractable.GetInstanceID()))
+            {
+                hit.collider.TryGetComponent(out currentInteractable);
+
+                if (currentInteractable)
+                {
+                    currentInteractable.OnFocus();
+                }
+            }
+        }
+        else if (currentInteractable)
+        {
+            currentInteractable.OnLoseFocus();
+            currentInteractable = null;
+        }
+        else
+        {
+
+        }
+    }
+
+    private void HandleInteractionInput()
+    {
+        if (Input.GetKeyDown(interactKey) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), 
+            out RaycastHit hit, interactionDistance, interactionLayer))      // press E to collect for alpha
+        {
+            currentInteractable.OnInteract();
+        }
+    }
+    // collect soul end
 }
