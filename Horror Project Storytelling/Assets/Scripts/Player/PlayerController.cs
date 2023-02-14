@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
             isUsingFlashlight = !isUsingFlashlight;
         }
         if(isUsingFlashlight){
-            flashlight.intensity = 1;
+            flashlight.intensity = 2;
         }else{
             flashlight.intensity = 0;
         }

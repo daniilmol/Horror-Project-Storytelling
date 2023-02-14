@@ -10,7 +10,7 @@ public class Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player"){
             print("Player entered trigger");
-            moment.SetActive(true);
+            moment.GetComponent<Moment>().enabled = true;
         }
     }
 }
