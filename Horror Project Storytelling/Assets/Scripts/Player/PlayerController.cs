@@ -125,7 +125,8 @@ public class PlayerController : MonoBehaviour
             if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 3)){
                 switch(hit.collider.tag){
                     case "Footsteps/WOOD":
-                    footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                        Debug.Log("hi");
+                    //footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
                     break;
                     case "Footsteps/METAL":
                     footstepsAudioSource.PlayOneShot(metalClips[Random.Range(0, metalClips.Length - 1)]);
