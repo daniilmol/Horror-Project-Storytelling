@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Footsteps/WOOD
   - Footsteps/METAL
+  - Soul
+  - Arrow
+  - Pedestal
+  - Key
+  - Manager
+  - Door
+  - Audio
   layers:
   - Default
   - TransparentFX
@@ -13,7 +20,7 @@ TagManager:
   - Trigger
   - Water
   - UI
-  - 
+  - interactable
   - 
   - 
   - 
