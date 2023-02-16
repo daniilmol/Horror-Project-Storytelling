@@ -28,11 +28,11 @@ public class EventManager : MonoBehaviour
         if (player.GetComponent<PlayerStats>().GetSoul() >= totalNumOfSoul && arrow != null)
         {
             // if current collected soul higher than required
-            arrow.SetActive(true);
+            
         }
         else
         {
-            arrow.SetActive(false);
+           
         }
     }
 
