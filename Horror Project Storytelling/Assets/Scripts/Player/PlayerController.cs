@@ -72,9 +72,9 @@ public class PlayerController : MonoBehaviour
         canMove = true;
         playerCamera = GetComponentInChildren<Camera>();
         characterController = GetComponent<CharacterController>();
-        flashlight = GameObject.Find("Flashlight").GetComponent<Light>();
+       // flashlight = GameObject.Find("Flashlight").GetComponent<Light>();
         defaultYPos = playerCamera.transform.localPosition.y;
-        defaultZPos = flashlight.transform.localPosition.z;
+       // defaultZPos = flashlight.transform.localPosition.z;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
             print(canMove);
             HandleMovementInput();
             HandleMouseLook();
-            HandleInputs();
+            //HandleInputs();
             ApplyFinalMovements();
         }
         if(canHeadbob){
@@ -102,16 +102,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void HandleInputs(){
-        if(Input.GetKeyDown(flashlightKey) && canUseFlashlight){
-            isUsingFlashlight = !isUsingFlashlight;
-        }
-        if(isUsingFlashlight){
-            flashlight.intensity = 2;
-        }else{
-            flashlight.intensity = 0;
-        }
-    }
+    //private void HandleInputs()
+    //{
+    //    if (Input.GetKeyDown(flashlightKey) && canUseFlashlight)
+    //    {
+    //        isUsingFlashlight = !isUsingFlashlight;
+    //    }
+    //    if (isUsingFlashlight)
+    //    {
+    //        flashlight.intensity = 2;
+    //    }
+    //    else
+    //    {
+    //        flashlight.intensity = 0;
+    //    }
+    //}
 
     private void HandleFootsteps(){
         if(!characterController.isGrounded){
