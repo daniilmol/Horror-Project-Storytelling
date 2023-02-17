@@ -8,10 +8,12 @@ public class ElevatorTrigger : MonoBehaviour
     private float riseSpeed = 3f;
     public GameObject leftOpenDoor;
     public GameObject rightOpenDoor;
-    private float doorOpenSpeed = 0.8f;
+    private float doorOpenSpeed = 0.75f;
     private float openTimer = 2f;
     private float closeTimer = 2f;
     private float riseTimer = 5f;
+    private Vector3 risePos = new Vector3(0, 3f, 0);
+  //  private Vector3 leftPos = new Vector3(0, 3f, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +45,8 @@ public class ElevatorTrigger : MonoBehaviour
                 if (riseTimer > 0)
                 {
                     riseTimer -= Time.deltaTime;
-                    transform.position = transform.position + new Vector3(0, riseSpeed, 0) * Time.deltaTime;
+                   // transform.position = + new Vector3(0, riseSpeed, 0) * Time.deltaTime;
+                    transform.position = Vector3.Lerp(transform.position, risePos, Time.deltaTime * riseSpeed);
                 }
                 else {
                     elevatorMove = false;
@@ -78,8 +81,10 @@ public class ElevatorTrigger : MonoBehaviour
 
     private void elevatorDoorOpen() {
         
-        leftOpenDoor.transform.position = leftOpenDoor.transform.position - new Vector3(0, 0, doorOpenSpeed) * Time.deltaTime;
-        rightOpenDoor.transform.position = rightOpenDoor.transform.position + new Vector3(0, 0, doorOpenSpeed) * Time.deltaTime;
+        leftOpenDoor.transform.position = Vector3.Lerp(leftOpenDoor.transform.position, new Vector3(leftOpenDoor.transform.position.x, leftOpenDoor.transform.position.y, leftOpenDoor.transform.position.z - 1f), doorOpenSpeed * Time.deltaTime);
+        rightOpenDoor.transform.position = Vector3.Lerp(rightOpenDoor.transform.position, new Vector3(rightOpenDoor.transform.position.x, rightOpenDoor.transform.position.y, rightOpenDoor.transform.position.z + 1f), doorOpenSpeed * Time.deltaTime); 
+
+        //transform.position = Vector3.Lerp(transform.position, risePos, Time.deltaTime * riseSpeed);
     }
 
     private void elevatorDoorClose()
