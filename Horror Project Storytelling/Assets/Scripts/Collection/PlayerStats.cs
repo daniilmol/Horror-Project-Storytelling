@@ -13,12 +13,17 @@ public class PlayerStats : MonoBehaviour
     public Text numOfKeyText;
     private int numOfKey;
 
-
+    private float sanity;
+    private float sanityDropRate;
+    private bool sanityDropping;
 
     public void Start()
     {
         numOfSoul = 0;
         numOfKey = 0;
+        sanity = 100;
+        sanityDropRate = 0;
+        sanityDropping = false;
     }
 
 
@@ -26,6 +31,7 @@ public class PlayerStats : MonoBehaviour
     {
         setText(numOfSoulText, "Soul: " + numOfSoul.ToString());
         setText(numOfKeyText, "Key: " + numOfKey.ToString());
+        ChangePlayerViewBasedOnSanity();
     }
     private void setText(Text text, string numText)
     {
@@ -53,5 +59,41 @@ public class PlayerStats : MonoBehaviour
         this.numOfKey = num;
     }
 
+    private void ChangePlayerViewBasedOnSanity(){
+        switch(sanity){
+            case 50:
+            break;
+            case 25:
+            case 10:
+            default:
+            break;
+        }
+    }
 
+    public void StartSanityPlay(){
+        StartCoroutine(DropSanityInTheDark());
+    }
+    
+    public void SanityPlay(bool sanityPlay){
+        sanityDropping = sanityPlay;
+    }
+
+    public void DecreaseSanity(float amount){
+        sanity -= amount;
+    }
+
+    public void IncreaseSanity(float amount){
+        sanity += amount;
+    }
+
+    public void ToggleSanityDrain(bool sanityDropping){
+        this.sanityDropping = sanityDropping;
+    }
+
+    IEnumerator DropSanityInTheDark(){
+        while(sanityDropping){
+            yield return new WaitForSeconds(1);
+            sanity -= sanityDropRate;
+        }
+    }
 }
