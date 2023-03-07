@@ -24,9 +24,15 @@ public class TestInteractable : Interactable
     {
         // when you look at the gameobject, play sound or smt
        
-        if(gameObject.tag == "Key" || gameObject.tag == "Soul"){
+        if(gameObject.tag == "Key" || gameObject.tag == "Soul" || gameObject.tag == "Pedestal")
+        {
              //Debug.Log("Look at " + gameObject.name);
             manager.GetComponent<EventManager>().SetScriptText("Press E to collect " + gameObject.name);
+        }
+
+        if(gameObject.tag == "Pedestal")
+        {
+            
         }
        
     }
@@ -85,7 +91,7 @@ public class TestInteractable : Interactable
                 // play sound - family show up
                // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
                 // soul of the families appear here
-                GameObject.FindGameObjectWithTag("Manager").GetComponent<EventManager>().PlayParticle();
+                //ameObject.FindGameObjectWithTag("Manager").GetComponent<EventManager>().PlayParticle();
 
 
                 // Destroy pedestal
