@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
-    private GameObject arrow;
+   // private GameObject arrow;
     private GameObject player;
-    public ParticleSystem ps;
+   // public ParticleSystem ps;
     public Text scriptText;
 
     [Range(2, 4)]
@@ -15,7 +15,7 @@ public class EventManager : MonoBehaviour
 
     public void Start()
     {
-        arrow = GameObject.FindGameObjectWithTag("Arrow");
+       // arrow = GameObject.FindGameObjectWithTag("Arrow");
         player = GameObject.FindGameObjectWithTag("Player");
     }
     public void Update()
@@ -45,13 +45,13 @@ public class EventManager : MonoBehaviour
     public void PlayParticle()
     {
         // play soul family when interact with pedestal
-        arrow.SetActive(false); 
-        ps.Play();
+      //  arrow.SetActive(false); 
+        //ps.Play();
     }
 
     public void StopParticle()
     {
-        ps.Stop();
+        //ps.Stop();
     }
 
     public void SetScriptText(string s)
