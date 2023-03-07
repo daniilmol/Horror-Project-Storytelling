@@ -25,15 +25,15 @@ public class EventManager : MonoBehaviour
 
     private void ActiveArrow()
     {
-        if (player.GetComponent<PlayerStats>().GetSoul() >= totalNumOfSoul && arrow != null)
-        {
-            // if current collected soul higher than required
-            arrow.SetActive(true);
-        }
-        else
-        {
-            arrow.SetActive(false);
-        }
+        // if (player.GetComponent<PlayerStats>().GetSoul() >= totalNumOfSoul && arrow != null)
+        // {
+        //     // if current collected soul higher than required
+        //     arrow.SetActive(true);
+        // }
+        // else
+        // {
+        //     arrow.SetActive(false);
+        // }
     }
 
     public int GetTotalSoul()
@@ -56,7 +56,10 @@ public class EventManager : MonoBehaviour
 
     public void SetScriptText(string s)
     {
-        scriptText.text = s;
+        if(s != this.scriptText.text){
+            scriptText.text = s;
+            this.CallReset(2.0f);
+        } 
     }
 
     private void ResetScriptText()

@@ -11,6 +11,7 @@ TagManager:
   - Arrow
   - Manager
   - Door
+  - Zombie
   layers:
   - Default
   - TransparentFX
