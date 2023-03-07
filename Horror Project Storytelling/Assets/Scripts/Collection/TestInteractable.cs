@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class TestInteractable : Interactable
 {
-   // private AudioController aCtrl;
+    //private AudioController aCtrl;
     private GameObject player;
     private GameObject manager;
+   // private IEnumerator coroutine;
+
 
 
     public void Start()
     {
-        //aCtrl = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioController>();
+       // aCtrl = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioController>();
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("Manager");
 
@@ -21,7 +23,12 @@ public class TestInteractable : Interactable
     public override void OnFocus()
     {
         // when you look at the gameobject, play sound or smt
-        // Debug.Log("Look at " + gameObject.name);
+       
+        if(gameObject.tag == "Key" || gameObject.tag == "Soul"){
+             //Debug.Log("Look at " + gameObject.name);
+            manager.GetComponent<EventManager>().SetScriptText("Press E to collect " + gameObject.name);
+        }
+       
     }
 
     public override void OnLoseFocus()
@@ -44,7 +51,7 @@ public class TestInteractable : Interactable
            // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // testing only
             //PlaySoulScript();
             manager.GetComponent<EventManager>().SetScriptText("something here...");  // replace the text
-            manager.GetComponent<EventManager>().CallReset(2.0f);
+            //manager.GetComponent<EventManager>().CallReset(2.0f);
            
             
           
@@ -76,7 +83,7 @@ public class TestInteractable : Interactable
                 player.GetComponent<PlayerStats>().SetSoul(0); // clear all soul
 
                 // play sound - family show up
-                //aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
+               // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
                 // soul of the families appear here
                 GameObject.FindGameObjectWithTag("Manager").GetComponent<EventManager>().PlayParticle();
 
@@ -86,22 +93,22 @@ public class TestInteractable : Interactable
             }
         }
 
-        // Interact with the door
-        if(gameObject.tag == "Door")
-        {
-            Debug.Log("interact door");
-            // check if player has key(s)
-            if(player.GetComponent<PlayerStats>().GetKey() >= 1)
-            {
-                int currentKey = player.GetComponent<PlayerStats>().GetKey();
-                player.GetComponent<PlayerStats>().SetKey(currentKey - 1); // consume one key
+        // // Interact with the door
+        // if(gameObject.tag == "Door")
+        // {
+        //     Debug.Log("interact door");
+        //     // check if player has key(s)
+        //     if(player.GetComponent<PlayerStats>().GetKey() >= 1)
+        //     {
+        //         int currentKey = player.GetComponent<PlayerStats>().GetKey();
+        //         player.GetComponent<PlayerStats>().SetKey(currentKey - 1); // consume one key
 
-                // play sound - open door
+        //         // play sound - open door
 
-                // destroy door
-                Destroy(gameObject);
-            }
-        }
+        //         // destroy door
+        //         Destroy(gameObject);
+        //     }
+        // }
 
 
     }
