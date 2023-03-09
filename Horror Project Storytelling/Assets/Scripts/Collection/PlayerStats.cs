@@ -13,9 +13,10 @@ public class PlayerStats : MonoBehaviour
     public Text numOfKeyText;
     private int numOfKey;
 
-    private float sanity;
+    [SerializeField] float sanity;
     private float sanityDropRate;
     private bool sanityDropping;
+    private GlitchEffect playerCamera;
 
     public void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerStats : MonoBehaviour
         sanity = 100;
         sanityDropRate = 0;
         sanityDropping = false;
+        playerCamera = Camera.main.GetComponent<GlitchEffect>();
     }
 
 
@@ -60,13 +62,14 @@ public class PlayerStats : MonoBehaviour
     }
 
     private void ChangePlayerViewBasedOnSanity(){
-        switch(sanity){
-            case 50:
-            break;
-            case 25:
-            case 10:
-            default:
-            break;
+        if(sanity < 50){
+            playerCamera.intensity = (50 - sanity) * 0.02f; 
+            playerCamera.colorIntensity = (50 - sanity) * 0.02f;
+            playerCamera.flipIntensity  = (50 - sanity) * 0.001f; 
+        }else{
+            playerCamera.intensity = 0;
+            playerCamera.colorIntensity = 0;
+            playerCamera.flipIntensity = 0;
         }
     }
 
@@ -78,11 +81,7 @@ public class PlayerStats : MonoBehaviour
         sanityDropping = sanityPlay;
     }
 
-    public void DecreaseSanity(float amount){
-        sanity -= amount;
-    }
-
-    public void IncreaseSanity(float amount){
+    public void AffectSanity(float amount){
         sanity += amount;
     }
 
