@@ -12,19 +12,21 @@ public class LightSanity : MonoBehaviour
     {
         lightObject = GetComponent<Light>();
         sphereCollider = GetComponent<SphereCollider>();
-        sphereCollider.radius = lightObject.range;
+        sphereCollider.radius = 0.1f;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player"){
             player.ToggleSanityDrain(false);
+            print("Player entered light range");
         }
     }
 
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "Player"){
             player.ToggleSanityDrain(true);
+            print("Player existed light range");
         }    
     }
 }

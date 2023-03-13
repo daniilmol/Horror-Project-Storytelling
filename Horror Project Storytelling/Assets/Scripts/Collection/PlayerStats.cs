@@ -23,9 +23,10 @@ public class PlayerStats : MonoBehaviour
         numOfSoul = 0;
         numOfKey = 0;
         sanity = 100;
-        sanityDropRate = 0;
-        sanityDropping = false;
+        sanityDropRate = 1;
+        sanityDropping = true;
         playerCamera = Camera.main.GetComponent<GlitchEffect>();
+        StartSanityPlay();
     }
 
 
@@ -94,5 +95,6 @@ public class PlayerStats : MonoBehaviour
             yield return new WaitForSeconds(1);
             sanity -= sanityDropRate;
         }
+        yield return new WaitForSeconds(0);
     }
 }
