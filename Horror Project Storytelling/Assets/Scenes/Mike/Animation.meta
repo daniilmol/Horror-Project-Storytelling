@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Horror Project Storytelling/Assets/AssetsStore.meta
+guid: 23bf62c4390a3ff4d87ca2cecfcca027
+========
 guid: eec6cfe189aefa6488a264c69753c172
+>>>>>>>> origin/AnimationPedestal:Horror Project Storytelling/Assets/Scenes/Mike/Animation.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

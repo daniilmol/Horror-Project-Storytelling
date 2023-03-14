@@ -8,7 +8,7 @@ public class EventManager : MonoBehaviour
     private GameObject player;
     public Text scriptText;
 
-    [Range(2, 4)]
+    [Range(1, 4)]
     public int totalNumOfSoul;
 
     // Animation
@@ -52,7 +52,6 @@ public class EventManager : MonoBehaviour
     }
 
  
-
     public void setDestroy(GameObject obj)
     {
         if(obj.tag == "Pedestal")
@@ -71,6 +70,20 @@ public class EventManager : MonoBehaviour
         if(s != this.scriptText.text){
             scriptText.text = s;
             this.CallReset(2.0f);
+        } 
+    }
+    public void SetHint(string s)
+    {
+        if(s != this.scriptText.text){
+            scriptText.text = s;
+            this.CallReset(4.5f);
+        } 
+    }
+
+    public void HoverScript(string s) {
+        if(s != this.scriptText.text){
+            scriptText.text = s;
+            this.CallReset(1.0f);
         } 
     }
 
