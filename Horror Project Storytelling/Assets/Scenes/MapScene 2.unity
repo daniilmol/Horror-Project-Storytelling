@@ -325,10 +325,10 @@ GameObject:
   - component: {fileID: 30787112}
   m_Layer: 0
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &30787111
 Transform:
@@ -677,10 +677,10 @@ GameObject:
   - component: {fileID: 74333971}
   m_Layer: 0
   m_Name: Floor (15)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &74333970
 Transform:
@@ -774,10 +774,10 @@ GameObject:
   - component: {fileID: 80588065}
   m_Layer: 0
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &80588064
 Transform:
@@ -1057,10 +1057,10 @@ GameObject:
   - component: {fileID: 97662647}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &97662646
 Transform:
@@ -1317,6 +1317,8 @@ GameObject:
   m_Component:
   - component: {fileID: 129114667}
   - component: {fileID: 129114668}
+  - component: {fileID: 129114670}
+  - component: {fileID: 129114669}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -1401,6 +1403,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!135 &129114669
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129114666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &129114670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129114666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &129469894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,10 +1442,10 @@ GameObject:
   - component: {fileID: 129469896}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &129469895
 Transform:
@@ -1737,10 +1764,10 @@ GameObject:
   - component: {fileID: 177614946}
   m_Layer: 0
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &177614945
 Transform:
@@ -1830,6 +1857,8 @@ GameObject:
   m_Component:
   - component: {fileID: 179542279}
   - component: {fileID: 179542280}
+  - component: {fileID: 179542282}
+  - component: {fileID: 179542281}
   m_Layer: 0
   m_Name: Ceiling Light (10)
   m_TagString: Untagged
@@ -1914,6 +1943,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &179542281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179542278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &179542282
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179542278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &183989545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2694,6 +2748,8 @@ GameObject:
   m_Component:
   - component: {fileID: 250045919}
   - component: {fileID: 250045920}
+  - component: {fileID: 250045922}
+  - component: {fileID: 250045921}
   m_Layer: 0
   m_Name: Ceiling Light (1)
   m_TagString: Untagged
@@ -2710,7 +2766,7 @@ Transform:
   m_GameObject: {fileID: 250045918}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -0.1385, y: 0.72, z: 0.4441}
-  m_LocalScale: {x: 0.016393444, y: 0.019607844, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1858093732}
@@ -2729,7 +2785,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 10
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2778,6 +2834,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &250045921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250045918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &250045922
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250045918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &250585205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,10 +2873,10 @@ GameObject:
   - component: {fileID: 250585207}
   m_Layer: 0
   m_Name: Floor (19)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &250585206
 Transform:
@@ -2889,10 +2970,10 @@ GameObject:
   - component: {fileID: 251936819}
   m_Layer: 0
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &251936818
 Transform:
@@ -3153,10 +3234,10 @@ GameObject:
   - component: {fileID: 262174621}
   m_Layer: 0
   m_Name: HallFloor (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &262174620
 Transform:
@@ -3418,10 +3499,10 @@ GameObject:
   - component: {fileID: 272705849}
   m_Layer: 0
   m_Name: Floor (18)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &272705848
 Transform:
@@ -3669,10 +3750,10 @@ GameObject:
   - component: {fileID: 292320820}
   m_Layer: 0
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &292320819
 Transform:
@@ -3991,10 +4072,10 @@ GameObject:
   - component: {fileID: 348674671}
   m_Layer: 0
   m_Name: Floor (13)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &348674670
 Transform:
@@ -4502,10 +4583,10 @@ GameObject:
   - component: {fileID: 383137977}
   m_Layer: 0
   m_Name: HallFloor (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &383137976
 Transform:
@@ -4596,10 +4677,10 @@ GameObject:
   - component: {fileID: 384609488}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &384609488
 Transform:
@@ -4924,10 +5005,10 @@ GameObject:
   - component: {fileID: 401568140}
   m_Layer: 0
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &401568139
 Transform:
@@ -5021,10 +5102,10 @@ GameObject:
   - component: {fileID: 412056746}
   m_Layer: 0
   m_Name: Floor (11)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &412056745
 Transform:
@@ -5114,6 +5195,8 @@ GameObject:
   m_Component:
   - component: {fileID: 421490003}
   - component: {fileID: 421490004}
+  - component: {fileID: 421490006}
+  - component: {fileID: 421490005}
   m_Layer: 0
   m_Name: Ceiling Light (2)
   m_TagString: Untagged
@@ -5149,7 +5232,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 9
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -5198,6 +5281,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &421490005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421490002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &421490006
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421490002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &421733625
 GameObject:
   m_ObjectHideFlags: 0
@@ -5212,10 +5320,10 @@ GameObject:
   - component: {fileID: 421733627}
   m_Layer: 0
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &421733626
 Transform:
@@ -5694,6 +5802,8 @@ GameObject:
   m_Component:
   - component: {fileID: 450598290}
   - component: {fileID: 450598291}
+  - component: {fileID: 450598293}
+  - component: {fileID: 450598292}
   m_Layer: 0
   m_Name: Ceiling Light (8)
   m_TagString: Untagged
@@ -5778,6 +5888,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &450598292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450598289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &450598293
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450598289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &451228671
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,10 +6165,10 @@ GameObject:
   - component: {fileID: 453420498}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &453420498
 Transform:
@@ -6387,10 +6522,10 @@ GameObject:
   - component: {fileID: 484390831}
   m_Layer: 0
   m_Name: Floor (16)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &484390830
 Transform:
@@ -6826,10 +6961,10 @@ GameObject:
   - component: {fileID: 494908988}
   m_Layer: 0
   m_Name: Floor (14)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &494908987
 Transform:
@@ -7222,10 +7357,10 @@ GameObject:
   - component: {fileID: 551995738}
   m_Layer: 0
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &551995737
 Transform:
@@ -7319,10 +7454,10 @@ GameObject:
   - component: {fileID: 554353946}
   m_Layer: 0
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &554353945
 Transform:
@@ -7707,10 +7842,10 @@ GameObject:
   - component: {fileID: 576908596}
   m_Layer: 0
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &576908595
 Transform:
@@ -8148,10 +8283,10 @@ GameObject:
   - component: {fileID: 615573969}
   m_Layer: 0
   m_Name: Floor (13)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &615573968
 Transform:
@@ -8440,10 +8575,10 @@ GameObject:
   - component: {fileID: 621962054}
   m_Layer: 0
   m_Name: Floor (19)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &621962053
 Transform:
@@ -8678,6 +8813,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8160725675885458173, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
+      propertyPath: keyNeeded
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160725675885458173, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: txtToDisplay
       value: 
       objectReference: {fileID: 1973130427}
@@ -8701,10 +8840,10 @@ GameObject:
   - component: {fileID: 659714824}
   m_Layer: 0
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &659714823
 Transform:
@@ -8794,6 +8933,8 @@ GameObject:
   m_Component:
   - component: {fileID: 663148683}
   - component: {fileID: 663148684}
+  - component: {fileID: 663148686}
+  - component: {fileID: 663148685}
   m_Layer: 0
   m_Name: Ceiling Light (5)
   m_TagString: Untagged
@@ -8829,7 +8970,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 10
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8878,6 +9019,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &663148685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663148682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &663148686
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663148682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &673284158
 GameObject:
   m_ObjectHideFlags: 0
@@ -8888,6 +9054,8 @@ GameObject:
   m_Component:
   - component: {fileID: 673284159}
   - component: {fileID: 673284160}
+  - component: {fileID: 673284162}
+  - component: {fileID: 673284161}
   m_Layer: 0
   m_Name: Ceiling Light (7)
   m_TagString: Untagged
@@ -8972,6 +9140,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &673284161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673284158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &673284162
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673284158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &676271818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9160,10 +9353,10 @@ GameObject:
   - component: {fileID: 703209747}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &703209746
 Transform:
@@ -9257,10 +9450,10 @@ GameObject:
   - component: {fileID: 711032627}
   m_Layer: 0
   m_Name: Floor (15)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &711032626
 Transform:
@@ -9554,10 +9747,10 @@ GameObject:
   - component: {fileID: 746050373}
   m_Layer: 0
   m_Name: Floor (13)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &746050372
 Transform:
@@ -9813,10 +10006,10 @@ GameObject:
   - component: {fileID: 778891712}
   m_Layer: 0
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &778891711
 Transform:
@@ -9906,6 +10099,8 @@ GameObject:
   m_Component:
   - component: {fileID: 788617847}
   - component: {fileID: 788617848}
+  - component: {fileID: 788617850}
+  - component: {fileID: 788617849}
   m_Layer: 0
   m_Name: Ceiling Light (14)
   m_TagString: Untagged
@@ -9990,6 +10185,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &788617849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788617846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &788617850
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788617846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &789686206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10001,6 +10221,14 @@ PrefabInstance:
       propertyPath: scriptText
       value: 
       objectReference: {fileID: 1973130429}
+    - target: {fileID: -4067612455300195327, guid: dc18807971fc70c49a83960f3ce579f3, type: 3}
+      propertyPath: totalNumOfSoul
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4067612455300195327, guid: dc18807971fc70c49a83960f3ce579f3, type: 3}
+      propertyPath: pedestalAnimator
+      value: 
+      objectReference: {fileID: 2068760472}
     - target: {fileID: 346661953400194170, guid: dc18807971fc70c49a83960f3ce579f3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10237,10 +10465,10 @@ GameObject:
   - component: {fileID: 803329783}
   m_Layer: 0
   m_Name: Floor (15)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &803329782
 Transform:
@@ -10400,6 +10628,8 @@ GameObject:
   m_Component:
   - component: {fileID: 805850965}
   - component: {fileID: 805850966}
+  - component: {fileID: 805850968}
+  - component: {fileID: 805850967}
   m_Layer: 0
   m_Name: Ceiling Light (2)
   m_TagString: Untagged
@@ -10416,7 +10646,7 @@ Transform:
   m_GameObject: {fileID: 805850964}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0.38737708, y: 0.48999977, z: 0.4215686}
-  m_LocalScale: {x: 0.016393444, y: 0.019607844, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1858093732}
@@ -10435,7 +10665,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 9
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -10484,6 +10714,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &805850967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805850964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &805850968
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805850964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &806828091
 GameObject:
   m_ObjectHideFlags: 0
@@ -10498,10 +10753,10 @@ GameObject:
   - component: {fileID: 806828093}
   m_Layer: 0
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &806828092
 Transform:
@@ -10595,10 +10850,10 @@ GameObject:
   - component: {fileID: 829884731}
   m_Layer: 0
   m_Name: Floor (17)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &829884730
 Transform:
@@ -10709,6 +10964,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3098277713196714036, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3730471344463500389, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3852906826671136199, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
       propertyPath: m_Text
       value: 
@@ -10736,6 +10999,10 @@ PrefabInstance:
     - target: {fileID: 3852906826671136199, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529596999070131403, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_Volume
+      value: 0.314
       objectReference: {fileID: 0}
     - target: {fileID: 5137261947761182488, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -10789,6 +11056,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5346896540185599587, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5501461854459194374, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
       propertyPath: m_Text
       value: 'Souls: 0'
@@ -10805,6 +11076,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5858560979179792295, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858560979373139569, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858560979373139569, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5858560979373139573, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10817,9 +11100,81 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: baseStepSpeed
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: sprintStepMultiplier
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 99f7363e0be69964790667fdc0e27198, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: ab11addc84b23834aa67a998cf0396ff, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 472e2b9d5d91f964dbc8f357282292a3, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 75ede461ce80afc4aad4e69495d42ee3, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: b819abc8164aa644cbdee8a3e5641da2, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 008301b8d3a8d254082254969ae39de2, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 925daf6d32231ea4b85eea505c5a7b30, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: cbc80b9628d5a854ba48d74da7954e67, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74129d0a8a5a55b40a911ce202d7a36d, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e5e9c92b4bec474780dbdd3e22f341e, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bace668dd5d4874493e775ba489b3d2, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: c06feb988790fc5498543bea0ee282d7, type: 3}
+    - target: {fileID: 5858560979373139574, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: woodClips.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9568fb9933e2ef842ac0702dc1463fbb, type: 3}
     - target: {fileID: 6062888919057809571, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
       propertyPath: m_Name
       value: PlayerWFlashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183499999529644491, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543881258364302125, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
@@ -11067,10 +11422,10 @@ GameObject:
   - component: {fileID: 877858598}
   m_Layer: 0
   m_Name: HallFloor (4)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &877858597
 Transform:
@@ -11256,10 +11611,10 @@ GameObject:
   - component: {fileID: 881590163}
   m_Layer: 0
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &881590162
 Transform:
@@ -11423,10 +11778,10 @@ GameObject:
   - component: {fileID: 887881465}
   m_Layer: 0
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &887881464
 Transform:
@@ -11997,10 +12352,10 @@ GameObject:
   - component: {fileID: 956174740}
   m_Layer: 0
   m_Name: Floor (4)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &956174739
 Transform:
@@ -12231,6 +12586,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1007209666}
   - component: {fileID: 1007209667}
+  - component: {fileID: 1007209669}
+  - component: {fileID: 1007209668}
   m_Layer: 0
   m_Name: Ceiling Light (12)
   m_TagString: Untagged
@@ -12266,7 +12623,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 10
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -12315,6 +12672,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1007209668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007209665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1007209669
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007209665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1031160287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12519,6 +12901,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1053579158}
   - component: {fileID: 1053579159}
+  - component: {fileID: 1053579161}
+  - component: {fileID: 1053579160}
   m_Layer: 0
   m_Name: Ceiling Light (6)
   m_TagString: Untagged
@@ -12554,7 +12938,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 11
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -12603,6 +12987,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1053579160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053579157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1053579161
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053579157}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1054174599
 GameObject:
   m_ObjectHideFlags: 0
@@ -12714,10 +13123,10 @@ GameObject:
   - component: {fileID: 1055354578}
   m_Layer: 0
   m_Name: HallFloor (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1055354577
 Transform:
@@ -12811,10 +13220,10 @@ GameObject:
   - component: {fileID: 1065459793}
   m_Layer: 0
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1065459792
 Transform:
@@ -12904,6 +13313,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1066889068}
   - component: {fileID: 1066889069}
+  - component: {fileID: 1066889071}
+  - component: {fileID: 1066889070}
   m_Layer: 0
   m_Name: Ceiling Light (15)
   m_TagString: Untagged
@@ -12988,6 +13399,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1066889070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066889067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1066889071
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066889067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1076910908
 GameObject:
   m_ObjectHideFlags: 0
@@ -13149,10 +13585,10 @@ GameObject:
   - component: {fileID: 1079173022}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1079173021
 Transform:
@@ -13308,10 +13744,10 @@ GameObject:
   - component: {fileID: 1094172845}
   m_Layer: 0
   m_Name: Floor (12)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1094172844
 Transform:
@@ -13405,10 +13841,10 @@ GameObject:
   - component: {fileID: 1095819793}
   m_Layer: 0
   m_Name: Floor (20)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1095819792
 Transform:
@@ -13498,6 +13934,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1102085616}
   - component: {fileID: 1102085617}
+  - component: {fileID: 1102085619}
+  - component: {fileID: 1102085618}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -13582,6 +14020,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!135 &1102085618
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102085615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1102085619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102085615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1107527597
 GameObject:
   m_ObjectHideFlags: 0
@@ -13596,10 +14059,10 @@ GameObject:
   - component: {fileID: 1107527599}
   m_Layer: 0
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1107527598
 Transform:
@@ -13693,10 +14156,10 @@ GameObject:
   - component: {fileID: 1115193880}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1115193879
 Transform:
@@ -13790,10 +14253,10 @@ GameObject:
   - component: {fileID: 1119356399}
   m_Layer: 0
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1119356398
 Transform:
@@ -13887,10 +14350,10 @@ GameObject:
   - component: {fileID: 1125277368}
   m_Layer: 0
   m_Name: HallFloor (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1125277367
 Transform:
@@ -14174,10 +14637,10 @@ GameObject:
   - component: {fileID: 1150452355}
   m_Layer: 0
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1150452354
 Transform:
@@ -14475,8 +14938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041889d8fdb736347b693c214a79d4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enteredText: {fileID: 1162902061}
-  shard: {fileID: 1915636050}
 --- !u!114 &1161088794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14639,6 +15100,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1169418895}
   - component: {fileID: 1169418896}
+  - component: {fileID: 1169418898}
+  - component: {fileID: 1169418897}
   m_Layer: 0
   m_Name: Ceiling Light (3)
   m_TagString: Untagged
@@ -14674,7 +15137,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 10
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -14723,6 +15186,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1169418897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169418894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1169418898
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169418894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1172944262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14943,6 +15431,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 401912, guid: a71dd1fa6efddfa41990980cd044de47, type: 3}
   m_PrefabInstance: {fileID: 1181945960}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1184223185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5858560979179792295, guid: b39d3aaf30e9dd844b30f29d53faadd7, type: 3}
+  m_PrefabInstance: {fileID: 844583869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184223189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184223185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98556367a4481314895dc1fedd2e0e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacementMap: {fileID: 0}
+  Shader: {fileID: 4800000, guid: 54598f7b348041a4fa53443e85c9ffd4, type: 3}
+  intensity: 0
+  flipIntensity: 0
+  colorIntensity: 0
 --- !u!1001 &1210048521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15420,10 +15930,10 @@ GameObject:
   - component: {fileID: 1245232050}
   m_Layer: 0
   m_Name: Floor (6)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1245232049
 Transform:
@@ -17309,10 +17819,10 @@ GameObject:
   - component: {fileID: 1354138876}
   m_Layer: 0
   m_Name: HallFloor (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1354138875
 Transform:
@@ -17402,6 +17912,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1357245681}
   - component: {fileID: 1357245682}
+  - component: {fileID: 1357245684}
+  - component: {fileID: 1357245683}
   m_Layer: 0
   m_Name: Ceiling Light (3)
   m_TagString: Untagged
@@ -17418,7 +17930,7 @@ Transform:
   m_GameObject: {fileID: 1357245680}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0.1393, y: 0.48999977, z: 0.7509}
-  m_LocalScale: {x: 0.016393444, y: 0.019607844, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1858093732}
@@ -17437,7 +17949,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 40
+  m_Range: 30
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -17486,6 +17998,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1357245683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357245680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1357245684
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357245680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1358806670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17566,10 +18103,10 @@ GameObject:
   - component: {fileID: 1361738697}
   m_Layer: 0
   m_Name: HallwayEntrance2
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1361738696
 Transform:
@@ -18029,10 +18566,10 @@ GameObject:
   - component: {fileID: 1404849335}
   m_Layer: 0
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1404849334
 Transform:
@@ -18218,10 +18755,10 @@ GameObject:
   - component: {fileID: 1417076850}
   m_Layer: 0
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1417076849
 Transform:
@@ -18615,6 +19152,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1453620013}
   - component: {fileID: 1453620014}
+  - component: {fileID: 1453620016}
+  - component: {fileID: 1453620015}
   m_Layer: 0
   m_Name: Ceiling Light
   m_TagString: Untagged
@@ -18699,6 +19238,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1453620015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453620012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1453620016
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453620012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1484905693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1751633834919698, guid: c220becf0d2978646a7bbd55376ac71f, type: 3}
@@ -18888,10 +19452,10 @@ GameObject:
   - component: {fileID: 1490906123}
   m_Layer: 0
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1490906122
 Transform:
@@ -19077,10 +19641,10 @@ GameObject:
   - component: {fileID: 1499190108}
   m_Layer: 0
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1499190107
 Transform:
@@ -19179,10 +19743,10 @@ GameObject:
   - component: {fileID: 1514947841}
   m_Layer: 0
   m_Name: Floor (14)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1514947840
 Transform:
@@ -19192,7 +19756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514947839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.78, y: -28.3, z: 18.09}
+  m_LocalPosition: {x: -17.779999, y: -28.3, z: 18.09}
   m_LocalScale: {x: 4, y: 1, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19279,7 +19843,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1516307147
 Transform:
@@ -19373,10 +19937,10 @@ GameObject:
   - component: {fileID: 1517364288}
   m_Layer: 0
   m_Name: HallFloor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1517364288
 BoxCollider:
@@ -19467,10 +20031,10 @@ GameObject:
   - component: {fileID: 1525115156}
   m_Layer: 0
   m_Name: EntireFloor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1525115156
 Transform:
@@ -19811,10 +20375,10 @@ GameObject:
   - component: {fileID: 1558187121}
   m_Layer: 0
   m_Name: Floor (11)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1558187120
 Transform:
@@ -19940,6 +20504,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1589485243}
   - component: {fileID: 1589485244}
+  - component: {fileID: 1589485246}
+  - component: {fileID: 1589485245}
   m_Layer: 0
   m_Name: Ceiling Light (11)
   m_TagString: Untagged
@@ -19975,7 +20541,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 9
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -20024,6 +20590,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1589485245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589485242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1589485246
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589485242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1599831982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20108,10 +20699,10 @@ GameObject:
   - component: {fileID: 1611573069}
   m_Layer: 0
   m_Name: Floor (11)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1611573068
 Transform:
@@ -20201,6 +20792,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1624187790}
   - component: {fileID: 1624187791}
+  - component: {fileID: 1624187793}
+  - component: {fileID: 1624187792}
   m_Layer: 0
   m_Name: Ceiling Light (9)
   m_TagString: Untagged
@@ -20236,7 +20829,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 10
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -20285,6 +20878,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1624187792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624187789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1624187793
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624187789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1639429878
 GameObject:
   m_ObjectHideFlags: 0
@@ -20295,6 +20913,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1639429879}
   - component: {fileID: 1639429880}
+  - component: {fileID: 1639429882}
+  - component: {fileID: 1639429881}
   m_Layer: 0
   m_Name: Ceiling Light (4)
   m_TagString: Untagged
@@ -20330,7 +20950,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 9
   m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -20379,6 +20999,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1639429881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639429878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1639429882
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639429878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1653627090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20525,10 +21170,10 @@ GameObject:
   - component: {fileID: 1660445333}
   m_Layer: 0
   m_Name: HallFloor (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1660445332
 Transform:
@@ -20622,10 +21267,10 @@ GameObject:
   - component: {fileID: 1661842728}
   m_Layer: 0
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1661842727
 Transform:
@@ -21009,6 +21654,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1681020080}
   - component: {fileID: 1681020081}
+  - component: {fileID: 1681020083}
+  - component: {fileID: 1681020082}
   m_Layer: 0
   m_Name: Ceiling Light (13)
   m_TagString: Untagged
@@ -21025,7 +21672,7 @@ Transform:
   m_GameObject: {fileID: 1681020079}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0.2006, y: -0.44, z: 0.2387}
-  m_LocalScale: {x: 0.016393444, y: 0.019607844, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1858093732}
@@ -21093,6 +21740,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1681020082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681020079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &1681020083
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681020079}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1682052059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21181,10 +21853,10 @@ GameObject:
   - component: {fileID: 1685033866}
   m_Layer: 0
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1685033865
 Transform:
@@ -21905,10 +22577,10 @@ GameObject:
   - component: {fileID: 1736637427}
   m_Layer: 0
   m_Name: Floor (18)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1736637426
 Transform:
@@ -22002,10 +22674,10 @@ GameObject:
   - component: {fileID: 1740818698}
   m_Layer: 0
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1740818697
 Transform:
@@ -22099,10 +22771,10 @@ GameObject:
   - component: {fileID: 1747458696}
   m_Layer: 0
   m_Name: Floor (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1747458695
 Transform:
@@ -22196,10 +22868,10 @@ GameObject:
   - component: {fileID: 1747569630}
   m_Layer: 0
   m_Name: HallwayEntrance
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1747569629
 Transform:
@@ -22484,7 +23156,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh229386
+  m_Name: pb_Mesh30980
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22692,10 +23364,10 @@ GameObject:
   - component: {fileID: 1809747373}
   m_Layer: 0
   m_Name: Floor (8)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1809747372
 Transform:
@@ -22789,10 +23461,10 @@ GameObject:
   - component: {fileID: 1823002201}
   m_Layer: 0
   m_Name: Floor (14)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1823002200
 Transform:
@@ -22952,10 +23624,10 @@ GameObject:
   - component: {fileID: 1844199605}
   m_Layer: 0
   m_Name: Floor (12)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1844199604
 Transform:
@@ -23797,10 +24469,10 @@ GameObject:
   - component: {fileID: 1891673934}
   m_Layer: 0
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1891673933
 Transform:
@@ -25296,10 +25968,10 @@ GameObject:
   - component: {fileID: 1974232440}
   m_Layer: 0
   m_Name: Floor (1)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1974232439
 Transform:
@@ -25393,10 +26065,10 @@ GameObject:
   - component: {fileID: 1982677331}
   m_Layer: 0
   m_Name: HallwayEntrance
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1982677330
 Transform:
@@ -25490,10 +26162,10 @@ GameObject:
   - component: {fileID: 1986064765}
   m_Layer: 0
   m_Name: EntranceFloor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1986064764
 Transform:
@@ -25587,10 +26259,10 @@ GameObject:
   - component: {fileID: 1989196756}
   m_Layer: 0
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1989196755
 Transform:
@@ -25684,10 +26356,10 @@ GameObject:
   - component: {fileID: 1996913655}
   m_Layer: 0
   m_Name: Floor (2)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1996913654
 Transform:
@@ -25781,10 +26453,10 @@ GameObject:
   - component: {fileID: 2003948932}
   m_Layer: 0
   m_Name: Floor (16)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2003948931
 Transform:
@@ -25948,10 +26620,10 @@ GameObject:
   - component: {fileID: 2015483879}
   m_Layer: 0
   m_Name: Floor (10)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2015483878
 Transform:
@@ -26606,10 +27278,10 @@ GameObject:
   - component: {fileID: 2040500112}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2040500112
 Transform:
@@ -26784,10 +27456,10 @@ GameObject:
   - component: {fileID: 2056447213}
   m_Layer: 0
   m_Name: HallFloor (6)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2056447212
 Transform:
@@ -26881,10 +27553,10 @@ GameObject:
   - component: {fileID: 2063599694}
   m_Layer: 0
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2063599693
 Transform:
@@ -27034,6 +27706,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 493860, guid: a73967be39a7cc74ca310e8a9d9de82d, type: 3}
   m_PrefabInstance: {fileID: 2064313666}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2068760472 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7362664920042945466, guid: d757084c581abfa4f88cf119b9568a31, type: 3}
+  m_PrefabInstance: {fileID: 1144656039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2071546872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27136,6 +27813,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2072672829}
   - component: {fileID: 2072672830}
+  - component: {fileID: 2072672832}
+  - component: {fileID: 2072672831}
   m_Layer: 0
   m_Name: Ceiling Light (16)
   m_TagString: Untagged
@@ -27220,6 +27899,31 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2072672831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072672828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57254c221349b3b49916998a4f458d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &2072672832
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072672828}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2086689869
 GameObject:
   m_ObjectHideFlags: 0
@@ -27234,10 +27938,10 @@ GameObject:
   - component: {fileID: 2086689871}
   m_Layer: 0
   m_Name: Floor (17)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2086689870
 Transform:
@@ -27401,10 +28105,10 @@ GameObject:
   - component: {fileID: 2092509793}
   m_Layer: 0
   m_Name: Floor (7)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2092509792
 Transform:
@@ -27568,10 +28272,10 @@ GameObject:
   - component: {fileID: 2095739170}
   m_Layer: 0
   m_Name: Floor (11)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2095739169
 Transform:
@@ -27665,10 +28369,10 @@ GameObject:
   - component: {fileID: 2098670408}
   m_Layer: 0
   m_Name: Floor (12)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2098670407
 Transform:
@@ -27762,10 +28466,10 @@ GameObject:
   - component: {fileID: 2100568141}
   m_Layer: 0
   m_Name: HallFloor (3)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2100568140
 Transform:
@@ -27859,10 +28563,10 @@ GameObject:
   - component: {fileID: 2101545175}
   m_Layer: 0
   m_Name: Floor (5)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2101545174
 Transform:
@@ -28212,10 +28916,10 @@ GameObject:
   - component: {fileID: 2129817257}
   m_Layer: 0
   m_Name: Floor (9)
-  m_TagString: Untagged
+  m_TagString: Footsteps/WOOD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2129817256
 Transform:
@@ -29228,6 +29932,119 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f40f3981973f9b246aee8744b1334d41, type: 3}
+--- !u!1001 &8180935341552901821
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 288025978067023579, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_Volume
+      value: 0.352
+      objectReference: {fileID: 0}
+    - target: {fileID: 410866429188051252, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 613229403113970547, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 823522799044074330, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2452337639771891837, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265935703502521976, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367886510362425261, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 99.36331
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.8595505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 94.747154
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476690907434291624, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3693637125255020406, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4241148973925362865, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738338203717028041, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328370962169793657, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_Name
+      value: AudioController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224332793344959691, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305657457819839687, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341919032316201738, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567371905722219627, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d2517291f33d6a44a1b14023edb15a7, type: 3}
 --- !u!4 &8853284769158638365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7835208568061569779, guid: f40f3981973f9b246aee8744b1334d41, type: 3}

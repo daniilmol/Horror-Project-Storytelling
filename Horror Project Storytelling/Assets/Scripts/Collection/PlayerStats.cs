@@ -63,15 +63,15 @@ public class PlayerStats : MonoBehaviour
     }
 
     private void ChangePlayerViewBasedOnSanity(){
-        // if(sanity < 50){
-        //     playerCamera.intensity = (50 - sanity) * 0.02f; 
-        //     playerCamera.colorIntensity = (50 - sanity) * 0.02f;
-        //     playerCamera.flipIntensity  = (50 - sanity) * 0.001f; 
-        // }else{
-        //     playerCamera.intensity = 0;
-        //     playerCamera.colorIntensity = 0;
-        //     playerCamera.flipIntensity = 0;
-        // }
+        if(sanity < 50){
+            playerCamera.intensity = (50 - sanity) * 0.02f; 
+            playerCamera.colorIntensity = (50 - sanity) * 0.02f;
+            playerCamera.flipIntensity  = (50 - sanity) * 0.001f; 
+        }else{
+            playerCamera.intensity = 0;
+            playerCamera.colorIntensity = 0;
+            playerCamera.flipIntensity = 0;
+        }
     }
 
     public void StartSanityPlay(){

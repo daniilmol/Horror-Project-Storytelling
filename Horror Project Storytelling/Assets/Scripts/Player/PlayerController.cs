@@ -102,21 +102,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void HandleInputs()
-    //{
-    //    if (Input.GetKeyDown(flashlightKey) && canUseFlashlight)
-    //    {
-    //        isUsingFlashlight = !isUsingFlashlight;
-    //    }
-    //    if (isUsingFlashlight)
-    //    {
-    //        flashlight.intensity = 2;
-    //    }
-    //    else
-    //    {
-    //        flashlight.intensity = 0;
-    //    }
-    //}
+    private void HandleInputs()
+    {
+       if (Input.GetKeyDown(flashlightKey) && canUseFlashlight)
+       {
+           isUsingFlashlight = !isUsingFlashlight;
+       }
+       if (isUsingFlashlight)
+       {
+           flashlight.intensity = 2;
+       }
+       else
+       {
+           flashlight.intensity = 0;
+       }
+    }
 
     private void HandleFootsteps(){
         if(!characterController.isGrounded){
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
                 switch(hit.collider.tag){
                     case "Footsteps/WOOD":
                         //Debug.Log("hi");
-                    //footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
+                    footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
                     break;
                     case "Footsteps/METAL":
                     footstepsAudioSource.PlayOneShot(metalClips[Random.Range(0, metalClips.Length - 1)]);
