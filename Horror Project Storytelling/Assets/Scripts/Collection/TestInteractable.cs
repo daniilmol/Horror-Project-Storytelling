@@ -92,13 +92,14 @@ public class TestInteractable : Interactable
                 player.GetComponent<PlayerStats>().SetSoul(0); // clear all soul
 
                 // play sound - family show up
-               // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
+                // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
                 // soul of the families appear here
                 //ameObject.FindGameObjectWithTag("Manager").GetComponent<EventManager>().PlayParticle();
 
 
                 // Destroy pedestal
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                manager.GetComponent<EventManager>().setDestroy(gameObject);
             }
         }
 
