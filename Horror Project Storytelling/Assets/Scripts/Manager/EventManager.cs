@@ -5,36 +5,45 @@ using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
 {
-   // private GameObject arrow;
     private GameObject player;
-   // public ParticleSystem ps;
     public Text scriptText;
 
     [Range(2, 4)]
     public int totalNumOfSoul;
 
+    // Animation
+    [Header("Animation")]
+    public Animator pedestalAnimator;
+
+
+    // check if need to destoy a object
+    private bool destroyPedestal = false;
+    private GameObject pedstal;
+
     public void Start()
     {
-       // arrow = GameObject.FindGameObjectWithTag("Arrow");
+
         player = GameObject.FindGameObjectWithTag("Player");
+       
     }
     public void Update()
     {
-        ActiveArrow();
+        if (destroyPedestal)
+        {
+            if(pedestalAnimator != null)
+            {
+                if (pedestalAnimator.GetCurrentAnimatorStateInfo(0).IsName("End"))
+                {
+                    Destroy(pedstal);
+                    pedestalAnimator = null;
+                }
+            }
+            
+
+        }
     }
 
-    private void ActiveArrow()
-    {
-        // if (player.GetComponent<PlayerStats>().GetSoul() >= totalNumOfSoul && arrow != null)
-        // {
-        //     // if current collected soul higher than required
-        //     arrow.SetActive(true);
-        // }
-        // else
-        // {
-        //     arrow.SetActive(false);
-        // }
-    }
+ 
 
     public int GetTotalSoul()
     {
@@ -42,16 +51,19 @@ public class EventManager : MonoBehaviour
         return totalNumOfSoul;
     }
 
-    public void PlayParticle()
-    {
-        // play soul family when interact with pedestal
-      //  arrow.SetActive(false); 
-        //ps.Play();
-    }
+ 
 
-    public void StopParticle()
+    public void setDestroy(GameObject obj)
     {
-        //ps.Stop();
+        if(obj.tag == "Pedestal")
+        {
+            destroyPedestal = true;
+            pedstal = obj;
+            if (pedestalAnimator != null)
+            {
+                pedestalAnimator.enabled = true;
+            }
+        }
     }
 
     public void SetScriptText(string s)
