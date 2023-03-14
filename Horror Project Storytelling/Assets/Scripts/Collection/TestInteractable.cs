@@ -102,6 +102,7 @@ public class TestInteractable : Interactable
                 manager.GetComponent<EventManager>().setDestroy(gameObject);
             }
         }
+        
 
         // // Interact with the door
         // if(gameObject.tag == "Door")

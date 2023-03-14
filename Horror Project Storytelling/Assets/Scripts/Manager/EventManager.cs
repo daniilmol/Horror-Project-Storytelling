@@ -8,7 +8,7 @@ public class EventManager : MonoBehaviour
     private GameObject player;
     public Text scriptText;
 
-    [Range(2, 4)]
+    [Range(1, 4)]
     public int totalNumOfSoul;
 
     // Animation
