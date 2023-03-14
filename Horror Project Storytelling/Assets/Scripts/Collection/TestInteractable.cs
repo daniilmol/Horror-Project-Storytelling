@@ -24,15 +24,18 @@ public class TestInteractable : Interactable
     {
         // when you look at the gameobject, play sound or smt
        
-        if(gameObject.tag == "Key" || gameObject.tag == "Soul" || gameObject.tag == "Pedestal")
+        if(gameObject.tag == "Key")
         {
-             //Debug.Log("Look at " + gameObject.name);
-            manager.GetComponent<EventManager>().SetScriptText("Press E to collect " + gameObject.name);
+            manager.GetComponent<EventManager>().SetScriptText("Press E to collect Key");
+        }
+        if(gameObject.tag == "Soul")
+        {
+            manager.GetComponent<EventManager>().SetScriptText("Press E to collect Soul");
         }
 
         if(gameObject.tag == "Pedestal")
         {
-            
+            manager.GetComponent<EventManager>().SetScriptText("Press E to deposit Souls ");
         }
        
     }

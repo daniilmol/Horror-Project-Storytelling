@@ -58,7 +58,7 @@ public class EventManager : MonoBehaviour
     {
         if(s != this.scriptText.text){
             scriptText.text = s;
-            this.CallReset(2.0f);
+            this.CallReset(3.0f);
         } 
     }
 
