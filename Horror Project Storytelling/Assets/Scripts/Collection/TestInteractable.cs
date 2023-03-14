@@ -24,7 +24,7 @@ public class TestInteractable : Interactable
     {
         // when you look at the gameobject, play sound or smt
        
-        if(gameObject.tag == "Key" || gameObject.tag == "Soul" || gameObject.tag == "Pedestal")
+        if(gameObject.tag == "Key" || gameObject.tag == "Soul")
         {
              //Debug.Log("Look at " + gameObject.name);
             manager.GetComponent<EventManager>().SetScriptText("Press E to collect " + gameObject.name);
@@ -32,7 +32,7 @@ public class TestInteractable : Interactable
 
         if(gameObject.tag == "Pedestal")
         {
-            
+            manager.GetComponent<EventManager>().SetScriptText("Find and Collect all the souls and Press E");
         }
        
     }
@@ -56,7 +56,7 @@ public class TestInteractable : Interactable
             // play sound - soul collected sound
            // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // testing only
             //PlaySoulScript();
-            manager.GetComponent<EventManager>().SetScriptText("something here...");  // replace the text
+            manager.GetComponent<EventManager>().SetScriptText("Soul Collect...");  
             //manager.GetComponent<EventManager>().CallReset(2.0f);
            
             
@@ -88,10 +88,7 @@ public class TestInteractable : Interactable
             {
                 player.GetComponent<PlayerStats>().SetSoul(0); // clear all soul
 
-                // play sound - family show up
-                // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
-                // soul of the families appear here
-                //ameObject.FindGameObjectWithTag("Manager").GetComponent<EventManager>().PlayParticle();
+                manager.GetComponent<EventManager>().SetScriptText("What");
 
 
                 // Destroy pedestal
