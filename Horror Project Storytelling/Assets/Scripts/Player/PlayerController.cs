@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(canMove){
-            print(canMove);
+           // print(canMove);
             HandleMovementInput();
             HandleMouseLook();
             //HandleInputs();
