@@ -16,6 +16,8 @@ TagManager:
   - Zombie
   - SpawnPoint
   - Box
+  - PuzzlePaper
+  - KeyCode
   layers:
   - Default
   - TransparentFX

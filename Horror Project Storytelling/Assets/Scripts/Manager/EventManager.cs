@@ -52,7 +52,6 @@ public class EventManager : MonoBehaviour
     }
 
  
-
     public void setDestroy(GameObject obj)
     {
         if(obj.tag == "Pedestal")
@@ -70,7 +69,21 @@ public class EventManager : MonoBehaviour
     {
         if(s != this.scriptText.text){
             scriptText.text = s;
-            this.CallReset(3.0f);
+            this.CallReset(2.0f);
+        } 
+    }
+    public void SetHint(string s)
+    {
+        if(s != this.scriptText.text){
+            scriptText.text = s;
+            this.CallReset(4.5f);
+        } 
+    }
+
+    public void HoverScript(string s) {
+        if(s != this.scriptText.text){
+            scriptText.text = s;
+            this.CallReset(1.0f);
         } 
     }
 

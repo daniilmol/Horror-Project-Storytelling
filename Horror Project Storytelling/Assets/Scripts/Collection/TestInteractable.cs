@@ -26,16 +26,16 @@ public class TestInteractable : Interactable
        
         if(gameObject.tag == "Key")
         {
-            manager.GetComponent<EventManager>().SetScriptText("Press E to collect Key");
+            manager.GetComponent<EventManager>().HoverScript("Press E to collect Key");
         }
         if(gameObject.tag == "Soul")
         {
-            manager.GetComponent<EventManager>().SetScriptText("Press E to collect Soul");
+            manager.GetComponent<EventManager>().HoverScript("Press E to collect Soul");
         }
 
         if(gameObject.tag == "Pedestal")
         {
-            manager.GetComponent<EventManager>().SetScriptText("Press E to deposit Souls ");
+            manager.GetComponent<EventManager>().HoverScript("Press E to deposit Souls ");
         }
        
     }
@@ -59,7 +59,7 @@ public class TestInteractable : Interactable
             // play sound - soul collected sound
            // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // testing only
             //PlaySoulScript();
-            manager.GetComponent<EventManager>().SetScriptText("something here...");  // replace the text
+            //manager.GetComponent<EventManager>().HoverScript("something here...");  // replace the text
             //manager.GetComponent<EventManager>().CallReset(2.0f);
            
             

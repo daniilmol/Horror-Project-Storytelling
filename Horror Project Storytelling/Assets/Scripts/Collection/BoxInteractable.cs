@@ -15,20 +15,15 @@ public class BoxInteractable : Interactable
     {
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("Manager");
-
     }
 
-    
+
     public override void OnFocus()
     {
         // when you look at the gameobject, play sound or smt
-       
-        // if(gameObject.tag == "Box")
-        // {
-        //     manager.GetComponent<EventManager>().SetScriptText("Press E to Open Box");
-        // }
 
     }
+
 
     public override void OnLoseFocus()
     {
@@ -52,7 +47,7 @@ public class BoxInteractable : Interactable
     {
         //Debug.Log("current: " + player.GetComponent<PlayerStats>().GetSoul() + "\n total: " + totalNumOfSoul);
         int totalNumOfSoul = manager.GetComponent<EventManager>().GetTotalSoul();
-        
+
         if (player.GetComponent<PlayerStats>().GetSoul() < totalNumOfSoul)
         {
             return false;
@@ -60,11 +55,11 @@ public class BoxInteractable : Interactable
         return true;
     }
 
-   
 
-    
 
-   
+
+
+
 
 
 }

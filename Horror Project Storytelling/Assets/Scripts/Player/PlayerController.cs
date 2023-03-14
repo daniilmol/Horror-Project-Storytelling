@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(canMove){
-            print(canMove);
+            //print(canMove);
             HandleMovementInput();
             HandleMouseLook();
             //HandleInputs();
@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 3)){
                 switch(hit.collider.tag){
                     case "Footsteps/WOOD":
-                        Debug.Log("hi");
+                        //Debug.Log("hi");
                     //footstepsAudioSource.PlayOneShot(woodClips[Random.Range(0, woodClips.Length - 1)]);
                     break;
                     case "Footsteps/METAL":
