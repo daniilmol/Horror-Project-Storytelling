@@ -8,6 +8,7 @@ public class GhostController : MonoBehaviour
     private Transform player;
     private NavMeshAgent agent;
     private Vector3 pos;
+    private bool canSeePlayer;
 
     [SerializeField] float wanderRadius;
     [SerializeField] float wanderTimer;
@@ -22,7 +23,12 @@ public class GhostController : MonoBehaviour
 
     void Update()
     {
-        Patrol();
+        FireRayCasts();
+        if(!canSeePlayer){
+            Patrol();
+        }else if(canSeePlayer){
+            SearchPlayer();
+        }
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
@@ -62,4 +68,25 @@ public class GhostController : MonoBehaviour
             timer = 0;
         }
      }
+
+     private void SearchPlayer(){
+        agent.SetDestination(player.position);
+     }
+
+     private void FireRayCasts(){
+        Vector3 targetPosition = player.position;
+        Vector3 hostPosition = gameObject.transform.position + new Vector3(0, 1f, 0);
+        Ray ray = new Ray(hostPosition, (targetPosition-hostPosition).normalized*10);
+        Debug.DrawRay(hostPosition, (targetPosition-hostPosition).normalized*10);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, 100)){
+            if(hit.transform == player){
+                canSeePlayer = true;
+                print("CAN SEE PLAYER");
+            }else{
+                canSeePlayer = false;
+                print("CANNOT SEE PLAYER");
+            }
+        }
+    }
 }
