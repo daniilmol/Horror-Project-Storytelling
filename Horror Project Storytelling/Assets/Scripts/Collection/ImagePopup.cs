@@ -20,19 +20,10 @@ public class ImagePopup : Interactable
     }
     public override void OnInteract()
     {
-        // press E
-        Debug.Log("Interact " + gameObject.name);
-
-        // Interact with the soul shards
-        if (gameObject.tag == "PuzzlePaper")
-        {
-            // pause game
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-            Time.timeScale = 0f;
-            imagePop.SetActive(true);
-            Debug.Log("Active");
-        }
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        imagePop.SetActive(true);
     }
     public void Resume()
     {

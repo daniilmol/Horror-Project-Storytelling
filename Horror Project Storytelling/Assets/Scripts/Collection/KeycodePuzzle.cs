@@ -16,6 +16,10 @@ public class KeycodePuzzle : Interactable
     private GameObject manager;
 
     public GameObject shard;
+
+    [TextArea]
+    public string newPageText;
+    public TextMeshProUGUI puzzlePage;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -66,15 +70,20 @@ public class KeycodePuzzle : Interactable
             shard.SetActive(true);
             Resume();
             Destroy(gameObject);
-        } else {
+            puzzlePage.text = newPageText;
+        }
+        else
+        {
             enteredText.text = "";
             timesFailed++;
-        }
-        if(timesFailed >= 3) {
-            if( timesFailed == 3) {
-                Resume();
+            if (timesFailed >= 3)
+            {
+                if (timesFailed == 3)
+                {
+                    Resume();
+                }
+                manager.GetComponent<EventManager>().SetHint(hint);
             }
-            manager.GetComponent<EventManager>().SetHint(hint);
         }
     }
 

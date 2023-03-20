@@ -67,6 +67,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canInteract = true;
     private Interactable currentInteractable;
 
+    // Journal
+    [Header("Journal")]
+    [SerializeField] private KeyCode journalKey = KeyCode.Q;
+    [SerializeField] private KeyCode escKey = KeyCode.Escape;
+    [SerializeField] public GameObject journal;
+
     
     void Awake(){
         canMove = true;
@@ -99,6 +105,12 @@ public class PlayerController : MonoBehaviour
         {
             HandleInteractionCheck();
             HandleInteractionInput();
+        }
+        if (Input.GetKeyDown(journalKey)) {
+            JournalPopUp();
+        }
+        if (Input.GetKeyDown(escKey)) {
+            JournalDisappear();
         }
     }
 
@@ -218,6 +230,20 @@ public class PlayerController : MonoBehaviour
         {
             currentInteractable.OnInteract();
         }
+    }
+
+    private void JournalPopUp() {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+        journal.SetActive(true);
+    }
+
+    private void JournalDisappear() {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        journal.SetActive(false);
     }
     
 }
