@@ -91,10 +91,14 @@ public class PlayerStats : MonoBehaviour
     }
 
     IEnumerator DropSanityInTheDark(){
-        while(sanityDropping){
-            yield return new WaitForSeconds(1);
-            sanity -= sanityDropRate;
+        while(true){
+            while(sanityDropping){
+                yield return new WaitForSeconds(1);
+                sanity -= sanityDropRate;
+            }while(!sanityDropping){
+                yield return new WaitForSeconds(1);
+                print("Sanity not dropping");
+            }
         }
-        yield return new WaitForSeconds(0);
     }
 }
