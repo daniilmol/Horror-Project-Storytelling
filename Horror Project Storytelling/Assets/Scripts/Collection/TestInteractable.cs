@@ -37,6 +37,7 @@ public class TestInteractable : Interactable
         {
             manager.GetComponent<EventManager>().HoverScript("Press E to deposit Souls ");
         }
+        
        
     }
 
