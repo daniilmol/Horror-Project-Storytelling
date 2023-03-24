@@ -10,6 +10,7 @@ public class Trigger : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Player"){
             moment.GetComponent<Moment>().enabled = true;
+            Destroy(this.gameObject);
         }
     }
 }

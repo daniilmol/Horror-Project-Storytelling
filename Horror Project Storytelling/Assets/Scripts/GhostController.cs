@@ -61,7 +61,7 @@ public class GhostController : MonoBehaviour
 
      private void Patrol(){
         timer += Time.deltaTime;
-        if(timer >= wanderTimer && transform.position == pos){
+        if(timer >= wanderTimer || transform.position == pos){
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             pos = newPos;
