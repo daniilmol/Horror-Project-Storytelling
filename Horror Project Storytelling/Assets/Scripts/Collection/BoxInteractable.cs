@@ -36,31 +36,10 @@ public class BoxInteractable : Interactable
         Debug.Log("Interact " + gameObject.name);
 
         // Interact with the soul shards
-        if (gameObject.tag == "Box")
-        {
-            manager.GetComponent<EventManager>().SetScriptText(message);  // replace the text
-        }
+
+        manager.GetComponent<EventManager>().SetScriptText(message);  // replace the text
+
     }
-
-    // Make sure player collect all soul
-    private bool CheckSoulNumber()
-    {
-        //Debug.Log("current: " + player.GetComponent<PlayerStats>().GetSoul() + "\n total: " + totalNumOfSoul);
-        int totalNumOfSoul = manager.GetComponent<EventManager>().GetTotalSoul();
-
-        if (player.GetComponent<PlayerStats>().GetSoul() < totalNumOfSoul)
-        {
-            return false;
-        }
-        return true;
-    }
-
-
-
-
-
-
-
 
 }
 

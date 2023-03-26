@@ -7,6 +7,7 @@ public class TestInteractable : Interactable
     //private AudioController aCtrl;
     private GameObject player;
     private GameObject manager;
+    public int soulBreakpoint;
    // private IEnumerator coroutine;
 
 
@@ -16,7 +17,7 @@ public class TestInteractable : Interactable
        // aCtrl = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioController>();
         player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("Manager");
-
+        soulBreakpoint = 1;
     }
 
     
@@ -62,10 +63,7 @@ public class TestInteractable : Interactable
             //PlaySoulScript();
             //manager.GetComponent<EventManager>().HoverScript("something here...");  // replace the text
             //manager.GetComponent<EventManager>().CallReset(2.0f);
-           
-            
           
-
             // Add shards collection number
             int currentSoul = player.GetComponent<PlayerStats>().GetSoul();
             player.GetComponent<PlayerStats>().SetSoul(currentSoul+1);
