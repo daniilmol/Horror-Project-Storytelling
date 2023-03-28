@@ -13,22 +13,33 @@ public class GhostController : MonoBehaviour
     [SerializeField] float wanderRadius;
     [SerializeField] float wanderTimer;
     private float timer;
+    private Animator animator;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         StartPatrol();
     }
 
     void Update()
     {
+        UpdateAnimator();
         FireRayCasts();
         if(!canSeePlayer){
             Patrol();
         }else if(canSeePlayer){
             SearchPlayer();
         }
+    }
+
+    private void UpdateAnimator()
+    {
+        Vector3 velocity = agent.velocity;
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+        float forwardSpeed = localVelocity.z;
+        animator.SetFloat("forwardSpeed", forwardSpeed);
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
