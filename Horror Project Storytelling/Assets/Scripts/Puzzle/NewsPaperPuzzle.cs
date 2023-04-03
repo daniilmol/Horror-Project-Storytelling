@@ -57,6 +57,7 @@ public class NewsPaperPuzzle : MonoBehaviour
             enterBtn.SetActive(false);
             shard.SetActive(true);
             Resume();
+            manager.GetComponent<LightManager>().puzzleFinish();
         }
         else
         {

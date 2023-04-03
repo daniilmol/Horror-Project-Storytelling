@@ -52,16 +52,6 @@ public class PlayerStats : MonoBehaviour
         this.numOfSoul = num;
     }
 
-    public int GetKey()
-    {
-        return this.numOfKey;
-    }
-
-    public void SetKey(int num)
-    {
-        this.numOfKey = num;
-    }
-
     private void ChangePlayerViewBasedOnSanity(){
         if(sanity < 50){
             playerCamera.intensity = (50 - sanity) * 0.02f; 

@@ -71,6 +71,8 @@ public class KeycodePuzzle : Interactable
             Resume();
             Destroy(gameObject);
             puzzlePage.text = newPageText;
+            manager.GetComponent<LightManager>().unhideLight();
+            manager.GetComponent<LightManager>().puzzleFinish();
         }
         else
         {

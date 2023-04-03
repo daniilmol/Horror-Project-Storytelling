@@ -46,6 +46,7 @@ public class PatientBoardPuzzle : MonoBehaviour
             ansCorrect = 0;
             shard.SetActive(true);
             enterBtn.SetActive(false);
+            manager.GetComponent<LightManager>().puzzleFinish();
         }
         else
         {
