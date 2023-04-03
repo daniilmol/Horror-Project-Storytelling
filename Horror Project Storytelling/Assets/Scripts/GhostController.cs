@@ -32,6 +32,7 @@ public class GhostController : MonoBehaviour
         }else if(canSeePlayer){
             SearchPlayer();
         }
+        KillPlayer();
     }
 
     private void UpdateAnimator()
@@ -82,6 +83,13 @@ public class GhostController : MonoBehaviour
 
      private void SearchPlayer(){
         agent.SetDestination(player.position);
+     }
+
+     private void KillPlayer(){
+        print("enemy distance from player: " + Vector3.Distance(player.transform.position, transform.position));
+        if(Vector3.Distance(player.transform.position, transform.position) < 1.3f){
+            player.position = new Vector3(0, 1, 0);
+        }
      }
 
      private void FireRayCasts(){
