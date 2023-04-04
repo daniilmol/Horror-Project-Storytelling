@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Functional Options")]
-    [SerializeField] private bool canSprint = true;
+    [SerializeField] public bool canSprint = true;
     [SerializeField] private bool canHeadbob = true;
     [SerializeField] private bool canFootstep = true;
     [SerializeField] private bool canUseFlashlight = true;

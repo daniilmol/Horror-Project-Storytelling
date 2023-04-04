@@ -60,6 +60,7 @@ public class FinalTimelinePuzzle : MonoBehaviour
             manager.GetComponent<AudioManager>().playRight();
             manager.GetComponent<LightManager>().puzzleFinish();
             manager.GetComponent<LightManager>().setLightColour();
+            player.GetComponent<PlayerController>().canSprint = false;
         }
         else
         {

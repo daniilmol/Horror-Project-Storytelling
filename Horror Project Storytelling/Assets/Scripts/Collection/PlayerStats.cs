@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour
         numOfSoul = 0;
         numOfKey = 0;
         sanity = 200;
-        sanityDropRate = 1.5f;
+        sanityDropRate = 2;
         sanityRecoverRate = 0.5f;
         sanityDropping = true;
         playerCamera = Camera.main.GetComponent<GlitchEffect>();
@@ -47,7 +47,7 @@ public class PlayerStats : MonoBehaviour
         if(sanity <= 0){
             sanityDropRate = 0;
         }else{
-            sanityDropRate = 1.5f;
+            sanityDropRate = 2;
         }
     }
 

@@ -76,6 +76,6 @@ public class LightManager : MonoBehaviour
             cafeteriaLights[i].color = Color.red;
             cafeteriaLights[i].intensity = 1.3f;
         }
-        player.GetComponent<PlayerStats>().SetSanity(60);
+        player.GetComponent<PlayerStats>().SetSanity(50);
     }
 }

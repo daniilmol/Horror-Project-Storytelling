@@ -5,6 +5,6 @@ using UnityEngine;
 public class BreakLight : Moment
 {
     void Start(){
-        Destroy(momentObject);
+        momentObject.SetActive(false);
     }
 }
