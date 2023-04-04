@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource ambient;
     public AudioSource wrong;
     public AudioSource right;
+    public AudioSource lightBreak;
     void Start()
     {
         
@@ -36,5 +37,8 @@ public class AudioManager : MonoBehaviour
     }
     public void playRight(){
         right.Play();
+    }
+    public void playLightBreak(){
+        lightBreak.Play();
     }
 }
