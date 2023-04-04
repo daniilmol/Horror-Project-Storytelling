@@ -22,14 +22,25 @@ public class LightManager : MonoBehaviour
         setHallLights(lightRange);
        
     }
-    public void Update()
-    {
-
-    }
 
     public void setHallLights(int newRange) {
         for(int i = 0; i < hallLights.Length; i++) {
             hallLights[i].range = newRange;
+        }
+    }
+    public void setStorageLights(int newRange) {
+        for(int i = 0; i < storageRoomLights.Length; i++) {
+            storageRoomLights[i].range = newRange;
+        }
+    }
+    public void setFacultyLights(int newRange) {
+        for(int i = 0; i < facultyRoomLights.Length; i++) {
+            facultyRoomLights[i].range = newRange;
+        }
+    }
+    public void setPatientLights(int newRange) {
+        for(int i = 0; i < patientRoomLights.Length; i++) {
+            patientRoomLights[i].range = newRange;
         }
     }
 
@@ -47,6 +58,24 @@ public class LightManager : MonoBehaviour
     public void setLightColour(){
         for(int i = 0; i < hallLights.Length; i++) {
             hallLights[i].color = Color.red;
+            hallLights[i].intensity = 1.3f;
         }
+        for(int i = 0; i < storageRoomLights.Length; i++) {
+            storageRoomLights[i].color = Color.red;
+            storageRoomLights[i].intensity = 1.3f;
+        }
+        for(int i = 0; i < facultyRoomLights.Length; i++) {
+            facultyRoomLights[i].color = Color.red;
+            facultyRoomLights[i].intensity = 1.3f;
+        }
+        for(int i = 0; i < patientRoomLights.Length; i++) {
+            patientRoomLights[i].color = Color.red;
+            patientRoomLights[i].intensity = 1.3f;
+        }
+        for(int i = 0; i < cafeteriaLights.Length; i++) {
+            cafeteriaLights[i].color = Color.red;
+            cafeteriaLights[i].intensity = 1.3f;
+        }
+        player.GetComponent<PlayerStats>().SetSanity(60);
     }
 }

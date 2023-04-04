@@ -7,6 +7,7 @@ public class ImagePopup : Interactable
 {
     private GameObject player; // the gameObject attached with pause resume()..
     public GameObject imagePop; // Image to pop up
+    public AudioSource openAudio;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -23,6 +24,9 @@ public class ImagePopup : Interactable
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         Time.timeScale = 0f;
+        if(openAudio != null) {
+            openAudio.Play();
+        }
         imagePop.SetActive(true);
     }
     public void Resume()

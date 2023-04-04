@@ -57,11 +57,13 @@ public class NewsPaperPuzzle : MonoBehaviour
             enterBtn.SetActive(false);
             shard.SetActive(true);
             Resume();
+            manager.GetComponent<AudioManager>().playRight();
             manager.GetComponent<LightManager>().puzzleFinish();
         }
         else
         {
             timesFailed++;
+            manager.GetComponent<AudioManager>().playWrong();
             if (timesFailed >= 3)
             {
                 manager.GetComponent<EventManager>().SetHint(hint);

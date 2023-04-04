@@ -48,10 +48,7 @@ public class ItemInteractable : Interactable
             Destroy(gameObject);
 
             // play sound - soul collected sound
-            // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // testing only
-            //PlaySoulScript();
-            //manager.GetComponent<EventManager>().HoverScript("something here...");  // replace the text
-            //manager.GetComponent<EventManager>().CallReset(2.0f);
+            manager.GetComponent<AudioManager>().getShard();
 
             // Add shards collection number
             int currentSoul = player.GetComponent<PlayerStats>().GetSoul();
@@ -65,17 +62,12 @@ public class ItemInteractable : Interactable
             {
                 totalSouls = totalSouls - player.GetComponent<PlayerStats>().GetSoul();
                 player.GetComponent<PlayerStats>().SetSoul(0); // clear all soul
-
-                // play sound - family show up
-                // aCtrl.PlaySound(aCtrl.GetSound("soulCollecting")); // for testing only
-                // soul of the families appear here
-                //ameObject.FindGameObjectWithTag("Manager").GetComponent<EventManager>().PlayParticle();
-
-
+                
                 // Destroy pedestal
                 if (totalSouls == 0)
                 {
                     manager.GetComponent<EventManager>().setDestroy(gameObject);
+                    player.GetComponent<PlayerStats>().SetSanity(100);
                 }
             }
         }

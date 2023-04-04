@@ -57,11 +57,13 @@ public class FinalTimelinePuzzle : MonoBehaviour
         {
             shard.SetActive(true);
             Resume();
+            manager.GetComponent<AudioManager>().playRight();
             manager.GetComponent<LightManager>().puzzleFinish();
             manager.GetComponent<LightManager>().setLightColour();
         }
         else
         {
+            manager.GetComponent<AudioManager>().playWrong();
             timesFailed++;
             if (timesFailed >= 3)
             {

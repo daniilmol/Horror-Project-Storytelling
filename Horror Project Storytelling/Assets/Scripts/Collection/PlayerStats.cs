@@ -16,6 +16,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] float sanity;
     private float sanityDropRate;
     private bool sanityDropping;
+    private float sanityRecoverRate;
     private GlitchEffect playerCamera;
 
     private Vector3 startingPosition;
@@ -25,8 +26,9 @@ public class PlayerStats : MonoBehaviour
         startingPosition = transform.parent.position;
         numOfSoul = 0;
         numOfKey = 0;
-        sanity = 100;
-        sanityDropRate = 1;
+        sanity = 200;
+        sanityDropRate = 1.5f;
+        sanityRecoverRate = 0.5f;
         sanityDropping = true;
         playerCamera = Camera.main.GetComponent<GlitchEffect>();
         StartSanityPlay();
@@ -45,7 +47,7 @@ public class PlayerStats : MonoBehaviour
         if(sanity <= 0){
             sanityDropRate = 0;
         }else{
-            sanityDropRate = 1;
+            sanityDropRate = 1.5f;
         }
     }
 
@@ -66,10 +68,10 @@ public class PlayerStats : MonoBehaviour
     }
 
     private void ChangePlayerViewBasedOnSanity(){
-        if(sanity < 50){
-            playerCamera.intensity = (50 - sanity) * 0.02f; 
-            playerCamera.colorIntensity = (50 - sanity) * 0.02f;
-            playerCamera.flipIntensity  = (50 - sanity) * 0.001f; 
+        if(sanity < 70){
+            playerCamera.intensity = (70 - sanity) * 0.02f; 
+            playerCamera.colorIntensity = (70 - sanity) * 0.02f;
+            playerCamera.flipIntensity  = (70 - sanity) * 0.001f; 
         }else{
             playerCamera.intensity = 0;
             playerCamera.colorIntensity = 0;
@@ -93,6 +95,10 @@ public class PlayerStats : MonoBehaviour
         return sanity;
     }
 
+    public void SetSanity(float newSanity){
+        sanity = newSanity;
+    }
+
     public void ToggleSanityDrain(bool sanityDropping){
         this.sanityDropping = sanityDropping;
     }
@@ -108,7 +114,7 @@ public class PlayerStats : MonoBehaviour
                 sanity -= sanityDropRate;
             }while(!sanityDropping){
                 yield return new WaitForSeconds(1);
-                print("Sanity not dropping");
+                sanity += sanityRecoverRate;
             }
         }
     }

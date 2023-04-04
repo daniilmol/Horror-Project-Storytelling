@@ -47,11 +47,13 @@ public class PatientBoardPuzzle : MonoBehaviour
             shard.SetActive(true);
             enterBtn.SetActive(false);
             manager.GetComponent<LightManager>().puzzleFinish();
+            manager.GetComponent<AudioManager>().playRight();
         }
         else
         {
             ansCorrect = 0;
             timesFailed++;
+            manager.GetComponent<AudioManager>().playWrong();
             if (timesFailed >= 3)
             {
                 manager.GetComponent<EventManager>().SetHint(hint);

@@ -9,6 +9,7 @@ public class KeycodePuzzle : Interactable
     // Start is called before the first frame update
     private GameObject player; // the gameObject attached with pause resume()..
     public GameObject keyCodePop; // Image to pop up
+    public GameObject pageLight;
     public Button enterButton;
     public TextMeshProUGUI enteredText;
     public string hint;
@@ -71,13 +72,16 @@ public class KeycodePuzzle : Interactable
             Resume();
             Destroy(gameObject);
             puzzlePage.text = newPageText;
+            pageLight.SetActive(true);
             manager.GetComponent<LightManager>().unhideLight();
             manager.GetComponent<LightManager>().puzzleFinish();
+            manager.GetComponent<AudioManager>().playRight();
         }
         else
         {
             enteredText.text = "";
             timesFailed++;
+            manager.GetComponent<AudioManager>().playWrong();
             if (timesFailed >= 3)
             {
                 if (timesFailed == 3)
