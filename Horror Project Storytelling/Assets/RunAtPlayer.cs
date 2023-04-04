@@ -11,6 +11,7 @@ public class RunAtPlayer : Moment
     private GameObject player;
     [SerializeField] GameObject momentToRun;
     [SerializeField] GameObject momentToRun2;
+    [SerializeField] GameObject momentToHang;
     [SerializeField] GameObject[] skinnedMesh = {};
 
     void Start()
@@ -21,6 +22,7 @@ public class RunAtPlayer : Moment
         animator.SetTrigger("runAt");
         Destroy(momentToRun);
         Destroy(momentToRun2);
+        momentToHang.SetActive(true);
         StartCoroutine(Disappear());
     }
 
@@ -52,7 +54,7 @@ public class RunAtPlayer : Moment
     }
 
     IEnumerator Disappear(){
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.8f);
         FadeOut();
     }
 
