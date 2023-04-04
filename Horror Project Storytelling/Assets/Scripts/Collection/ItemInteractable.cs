@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemInteractable : Interactable
 {
@@ -70,6 +71,16 @@ public class ItemInteractable : Interactable
                     player.GetComponent<PlayerStats>().SetSanity(100);
                 }
             }
+        }
+
+        //Game ends
+        if (player.GetComponent<PlayerStats>().GetSoul() == 4) {
+            SceneManager.LoadScene("Cut");
+        }
+
+        if (totalSouls == 0)
+        {
+            SceneManager.LoadScene("Cut");
         }
     }
 }
