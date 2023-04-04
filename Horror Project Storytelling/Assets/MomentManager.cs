@@ -8,8 +8,12 @@ public class MomentManager : MonoBehaviour
     [SerializeField] private Moment[] momentPrerequisites;
     public void MomentTriggered(){
         for(int i = 0; i < momentPrerequisites.Length; i++){
-            if(Moment.numMoments >= momentPrerequisites[i].GetRequired()){
-                momentPrerequisites[i].enabled = true;
+            try{
+                if(Moment.numMoments >= momentPrerequisites[i].GetRequired()){
+                    momentPrerequisites[i].enabled = true;
+                }
+            }catch(MissingReferenceException mre){
+                print("Exception Caught");
             }
         }
     }

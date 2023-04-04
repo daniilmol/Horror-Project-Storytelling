@@ -135,8 +135,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65b265cb6b6dfb44bebfde7c756370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objects: []
   wanderRadius: 10
   wanderTimer: 5
+  skinnedMesh:
+  - {fileID: 1550704099385899647}
+  - {fileID: 2814165517966641261}
+  - {fileID: 270465947064061304}
+  - {fileID: 248755296981790285}
+  - {fileID: 5361776541479888206}
 --- !u!195 &-2755348168819445434
 NavMeshAgent:
   m_ObjectHideFlags: 0

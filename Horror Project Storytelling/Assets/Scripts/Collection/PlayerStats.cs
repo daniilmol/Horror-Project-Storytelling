@@ -29,7 +29,7 @@ public class PlayerStats : MonoBehaviour
         sanity = 200;
         sanityDropRate = 2;
         sanityRecoverRate = 0.5f;
-        sanityDropping = true;
+        sanityDropping = false;
         playerCamera = Camera.main.GetComponent<GlitchEffect>();
         StartSanityPlay();
     }
@@ -41,6 +41,7 @@ public class PlayerStats : MonoBehaviour
         setText(numOfKeyText, "Key: " + numOfKey.ToString());
         ChangePlayerViewBasedOnSanity();
         PreventNegativeSanity();
+        PreventPositiveSanity();
     }
 
     private void PreventNegativeSanity(){
@@ -48,6 +49,14 @@ public class PlayerStats : MonoBehaviour
             sanityDropRate = 0;
         }else{
             sanityDropRate = 2;
+        }
+    }
+
+    private void PreventPositiveSanity(){
+        if(sanity >= 200){
+            sanityRecoverRate = 0;
+        }else{
+            sanityRecoverRate = 0.5f;
         }
     }
 
@@ -88,7 +97,11 @@ public class PlayerStats : MonoBehaviour
     }
 
     public void AffectSanity(float amount){
-        sanity += amount;
+        if(sanity + amount <= 0){
+            sanity = 0;
+        }else{
+            sanity += amount;
+        }
     }
 
     public float GetSanity(){

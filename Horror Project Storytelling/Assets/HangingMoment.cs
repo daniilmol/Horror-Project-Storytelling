@@ -6,7 +6,10 @@ public class HangingMoment : Moment
 {
     [SerializeField] Light[] patientRoomLights;
     private bool flashed;
+    private PlayerStats playerStats;
     void Start(){
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        playerStats.AffectSanity(-35f);
         for(int i = 0; i < transform.childCount; i++){
             transform.GetChild(i).gameObject.SetActive(true);
         }

@@ -9,36 +9,41 @@ public class AIController : MonoBehaviour
     private GameObject player;
     private PlayerStats playerStats;
     private bool girlSpawned;
+    private GhostController ghostController;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerStats = player.GetComponent<PlayerStats>();
-        girlSpawned = false;
+        SpawnGirl();
     }
 
     void Update()
     {
         if(playerStats.GetSanity() < 30 && !girlSpawned){
-            SpawnGirl();
+            ActivateGirl();
         }else if(playerStats.GetSanity() >= 30 && girlSpawned){
-            DespawnGirl();
+            DeactivateGirl();
         }
     }
 
     public void SpawnGirl(){
-        girlSpawned = true;
         Transform[] spawnPoints = new Transform[3];
         int i = 0;
         foreach(Transform child in spawnPointParent.transform){
             spawnPoints[i++] = child;
         }
         GameObject girl = Instantiate(Resources.Load("GhostGirl") as GameObject, spawnPoints[Random.Range(0, spawnPoints.Length)].position, Quaternion.identity);
-        print("GIRL HAS BEEN INSTANTIATED");
+        ghostController = girl.GetComponent<GhostController>();
     }
 
-    private void DespawnGirl(){
-        Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+    private void ActivateGirl(){
+        girlSpawned = true;
+        ghostController.ToggleActive();
+    }
+
+    private void DeactivateGirl(){
         girlSpawned = false;
+        ghostController.ToggleActive();
     }
 }

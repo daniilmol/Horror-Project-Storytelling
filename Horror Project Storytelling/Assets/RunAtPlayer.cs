@@ -9,6 +9,7 @@ public class RunAtPlayer : Moment
     private Animator animator;
     private NavMeshAgent agent;
     private GameObject player;
+    private PlayerStats playerStats;
     [SerializeField] GameObject momentToRun;
     [SerializeField] GameObject momentToRun2;
     [SerializeField] GameObject momentToHang;
@@ -17,8 +18,10 @@ public class RunAtPlayer : Moment
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        playerStats = player.GetComponent<PlayerStats>();
         animator = momentObject.GetComponent<Animator>();
         agent = momentObject.GetComponent<NavMeshAgent>();
+        playerStats.AffectSanity(-20f);
         animator.SetTrigger("runAt");
         Destroy(momentToRun);
         Destroy(momentToRun2);

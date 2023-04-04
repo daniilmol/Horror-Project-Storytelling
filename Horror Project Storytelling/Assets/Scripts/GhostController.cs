@@ -9,9 +9,13 @@ public class GhostController : MonoBehaviour
     private NavMeshAgent agent;
     private Vector3 pos;
     private bool canSeePlayer;
+    private bool active;
+    private bool visible;
 
+    private GhostInteractable[] objects;
     [SerializeField] float wanderRadius;
     [SerializeField] float wanderTimer;
+    [SerializeField] GameObject[] skinnedMesh = {};
     private float timer;
     private Animator animator;
 
@@ -20,19 +24,38 @@ public class GhostController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        active = false;
+        visible = true;
+        objects = GameObject.FindObjectsOfType<GhostInteractable>();
         StartPatrol();
+        StartCoroutine(TossingObjects());
     }
 
     void Update()
     {
         UpdateAnimator();
         FireRayCasts();
-        if(!canSeePlayer){
+        ActiveBehaviour();
+        if(!canSeePlayer || !active){
             Patrol();
-        }else if(canSeePlayer){
+        }else if(canSeePlayer && active){
             SearchPlayer();
+            KillPlayer();
         }
-        KillPlayer();
+    }
+
+    private void ActiveBehaviour(){
+        if(active && !visible){
+            visible = true;
+            foreach(GameObject go in skinnedMesh){
+                go.GetComponent<SkinnedMeshRenderer>().enabled = true;
+            }
+        }else if(!active && visible){
+            visible = false;
+            foreach(GameObject go in skinnedMesh){
+                go.GetComponent<SkinnedMeshRenderer>().enabled = false;
+            }
+        }
     }
 
     private void UpdateAnimator()
@@ -49,6 +72,28 @@ public class GhostController : MonoBehaviour
         NavMeshHit navHit;
         NavMesh.SamplePosition (randDirection, out navHit, dist, layermask);
         return navHit.position;
+    }
+
+    private void CheckForObjects(){
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        for(int i = 0; i < objects.Length; i++){
+            GameObject t = objects[i].gameObject;
+            float dist = Vector3.Distance(t.transform.position, currentPos);
+            if (dist < minDist)
+            {
+                tMin = t.transform;
+                minDist = dist;
+            }
+        }
+        if(minDist < 5){
+            float[] forces = new float[3];
+            for(int j = 0; j < forces.Length; j++){
+                forces[j] = Random.Range(4, 10);
+            }
+            tMin.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(forces[0], forces[1], forces[2]), ForceMode.Impulse);
+        }
     }
 
     NavMeshPath path;
@@ -86,9 +131,20 @@ public class GhostController : MonoBehaviour
      }
 
      private void KillPlayer(){
-        print("enemy distance from player: " + Vector3.Distance(player.transform.position, transform.position));
         if(Vector3.Distance(player.transform.position, transform.position) < 1.3f){
             player.position = new Vector3(0, 1, 0);
+        }
+     }
+
+     public void ToggleActive(){
+        active = !active;
+     }
+
+     IEnumerator TossingObjects(){
+        while(true){
+            yield return new WaitForSeconds(10);
+            print("CHECKING FOR OBJECTS");
+            CheckForObjects();
         }
      }
 
