@@ -67,20 +67,11 @@ public class ItemInteractable : Interactable
                 // Destroy pedestal
                 if (totalSouls == 0)
                 {
+                    SceneManager.LoadScene("Cut");
                     manager.GetComponent<EventManager>().setDestroy(gameObject);
                     player.GetComponent<PlayerStats>().SetSanity(100);
                 }
             }
-        }
-
-        //Game ends
-        if (player.GetComponent<PlayerStats>().GetSoul() == 4) {
-            SceneManager.LoadScene("Cut");
-        }
-
-        if (totalSouls == 0)
-        {
-            SceneManager.LoadScene("Cut");
         }
     }
 }

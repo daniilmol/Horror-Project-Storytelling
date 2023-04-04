@@ -135,8 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65b265cb6b6dfb44bebfde7c756370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects: []
-  wanderRadius: 10
+  wanderRadius: 30
   wanderTimer: 5
   skinnedMesh:
   - {fileID: 1550704099385899647}

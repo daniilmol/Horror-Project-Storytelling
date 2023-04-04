@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Daniil/PlayerController.unity
-    guid: 70bb2e647a5e14e4785f1d7e04f42324
+    path: Assets/Scenes/FinalMap.unity
+    guid: ff45d8e9c275d9044b92825877da192a
+  - enabled: 1
+    path: Assets/Scenes/Winston/Cut.unity
+    guid: 877350f28cbbf3643addd59e25cc5946
   m_configObjects: {}
