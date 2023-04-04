@@ -68,6 +68,13 @@ public class EventManager : MonoBehaviour
         } 
     }
 
+    public void SetDialogueText(string s, float time) {
+        if(s != this.scriptText.text){
+            scriptText.text = s;
+            this.CallReset(time);
+        } 
+    }
+
     public void HoverScript(string s) {
         if(s != this.scriptText.text){
             scriptText.text = s;
