@@ -254,6 +254,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161082618049355062}
     m_Modifications:
+    - target: {fileID: 5547838116063321873, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547838116063321875, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
       propertyPath: m_Name
       value: MomentTrigger (1)
@@ -333,6 +337,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161082618049355062}
     m_Modifications:
+    - target: {fileID: 5547838116063321873, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547838116063321875, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
       propertyPath: m_Name
       value: MomentTrigger
@@ -1263,6 +1271,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161082618049355062}
     m_Modifications:
+    - target: {fileID: 5547838116063321873, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547838116063321875, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
       propertyPath: m_Name
       value: MomentTrigger (2)
@@ -1333,6 +1345,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161082618049355062}
     m_Modifications:
+    - target: {fileID: 5547838116063321873, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547838116063321875, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
       propertyPath: m_Name
       value: RunningTrigger
@@ -1412,6 +1428,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2161082618049355062}
     m_Modifications:
+    - target: {fileID: 5547838116063321873, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5547838116063321875, guid: cc7d1f55f9185de4e9c6986f20fe00ec, type: 3}
       propertyPath: m_Name
       value: RunningTrigger
@@ -1602,28 +1622,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4839057340718410424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782115832088817743}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3474a29f728a8b4ebc8b8b0cfc6083d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  momentObject: {fileID: 4782115832088817743}
-  required: 3
-  skinnedMesh:
-  - {fileID: 6242829294077677761}
-  - {fileID: 7217622737857700563}
-  - {fileID: 4676753312066021318}
-  - {fileID: 4635339385697256691}
-  - {fileID: 670775039048159216}
-  momentToRun: {fileID: 1142269832130781531}
-  momentToRun2: {fileID: 1142269832395071211}
 --- !u!195 &4839057340718410308
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1646,6 +1644,28 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4839057340718410424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782115832088817743}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3474a29f728a8b4ebc8b8b0cfc6083d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  momentObject: {fileID: 4782115832088817743}
+  required: 3
+  skinnedMesh:
+  - {fileID: 6242829294077677761}
+  - {fileID: 7217622737857700563}
+  - {fileID: 4676753312066021318}
+  - {fileID: 4635339385697256691}
+  - {fileID: 670775039048159216}
+  momentToRun: {fileID: 1142269832130781531}
+  momentToRun2: {fileID: 1142269832395071211}
 --- !u!1 &6242829294077677761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1550704099385899647, guid: 51359beab1ac51943b2653e8e101ee42, type: 3}
@@ -1677,6 +1697,7 @@ MonoBehaviour:
   required: 2
   momentToRun: {fileID: 1142269832130781531}
   momentToRun2: {fileID: 1142269832395071211}
+  momentToHang: {fileID: 0}
   skinnedMesh:
   - {fileID: 6242829294077677761}
   - {fileID: 7217622737857700563}
